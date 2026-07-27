@@ -22,6 +22,14 @@ import {
   UserCheck,
 } from "lucide-react";
 
+// Imagens como constantes base64
+const logoImpar =
+  "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAyADIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWm5ybnJ2eoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlbaWmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/CiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==";
+
+const fotoSuzi = "data:image/jpeg;base64,[AQUI VAI A FOTO SUZI EM BASE64 - VOCÊ COLOCA]";
+
+const fotoLuiz = "data:image/jpeg;base64,[AQUI VAI A FOTO LUIZ EM BASE64 - VOCÊ COLOCA]";
+
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
@@ -176,8 +184,8 @@ function Index() {
       {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="font-display text-xl font-semibold tracking-tight">
-            ÍMPAR
+          <a href="#top" className="flex items-center">
+            <img src={logoImpar} alt="ÍMPAR" className="h-8 w-auto" />
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#quem-somos" className="hover:text-foreground">Quem somos</a>
@@ -229,11 +237,11 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-brand-soft to-accent shadow-2xl">
-              <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-                <span className="rounded-md bg-card/70 px-3 py-1.5">Espaço reservado para foto</span>
-              </div>
-            </div>
+            <img
+              src={logoImpar}
+              alt="ÍMPAR"
+              className="aspect-[4/5] w-full rounded-2xl border border-border object-cover shadow-2xl"
+            />
             <div className="absolute -bottom-6 -left-6 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
               <p className="font-display text-3xl font-semibold text-brand">23</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground">anos de estrada</p>
@@ -251,18 +259,15 @@ function Index() {
               23 anos formando líderes. Agora, escalando com tecnologia.
             </h2>
             <div className="mt-8 grid grid-cols-2 gap-4">
-              {["Suzi Souza", "Luiz Martins"].map((name, i) => (
+              {[
+                { name: "Suzi Souza", role: "Cofundadora, técnica", src: fotoSuzi },
+                { name: "Luiz Martins", role: "Cofundador, gestão", src: fotoLuiz },
+              ].map(({ name, role, src }) => (
                 <div key={name} className="overflow-hidden rounded-xl border border-border bg-card">
-                  <div className="aspect-square bg-gradient-to-br from-brand-soft to-accent">
-                    <div className="flex h-full items-center justify-center text-xs text-muted-foreground">
-                      Foto
-                    </div>
-                  </div>
+                  <img src={src} alt={name} className="aspect-square w-full object-cover" />
                   <div className="p-3">
                     <p className="text-sm font-semibold">{name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {i === 0 ? "Cofundadora, técnica" : "Cofundador, gestão"}
-                    </p>
+                    <p className="text-xs text-muted-foreground">{role}</p>
                   </div>
                 </div>
               ))}
