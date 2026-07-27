@@ -14,23 +14,29 @@ import {
   Mail,
   Phone,
   Linkedin,
+  Activity,
+  Users2,
+  Award,
+  Building2,
+  Briefcase,
+  UserCheck,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "ÍMPAR Desenvolvimento de Pessoas | Liderança e Alta Performance" },
+      { title: "ÍMPAR Desenvolvimento de Pessoas | Consultoria Premium em RH e Liderança" },
       {
         name: "description",
         content:
-          "Há 23 anos apoiamos CEOs, diretores e áreas de Gente & Gestão a formarem líderes preparados e times de alta performance.",
+          "Consultoria premium de desenvolvimento humano. Diagnóstico, desenvolvimento e gestão para médias e grandes empresas, profissionais de RH e líderes.",
       },
       { property: "og:title", content: "ÍMPAR Desenvolvimento de Pessoas" },
       {
         property: "og:description",
         content:
-          "Método, escuta e tecnologia proprietária para desenvolver lideranças que geram resultados duradouros.",
+          "23 anos desenvolvendo pessoas. Consultoria premium que une método, escuta e tecnologia proprietária.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -43,15 +49,25 @@ const services = [
     icon: Users,
     title: (
       <>
-        <em>DISC</em> e <em>IMPARPERFIL</em>
+        Avaliações comportamentais
       </>
     ),
-    desc: "Mapeamento comportamental e de perfis para decisões de contratação, sucessão e desenvolvimento com base em dados.",
+    desc: (
+      <>
+        <em>DISC</em>, <em>IMPARPERFIL</em> e <em>STARTRUST Executive Advisor</em>. Mapeamento
+        profundo para decisões de contratação, sucessão e desenvolvimento.
+      </>
+    ),
   },
   {
     icon: Compass,
     title: "Mentorias",
-    desc: "Acompanhamento estratégico de líderes e executivos com foco em momentos-chave do negócio: transições, sucessão e novos desafios.",
+    desc: (
+      <>
+        Acompanhamento estratégico para líderes e para profissionais de RH que querem abrir a
+        própria consultoria, com o programa <em>Viva de RH</em>.
+      </>
+    ),
   },
   {
     icon: Sparkles,
@@ -69,6 +85,25 @@ const services = [
     ),
   },
   {
+    icon: Activity,
+    title: "Análise Corporal",
+    desc: "Leitura das dinâmicas corporais aplicada ao desenvolvimento de pessoas, com foco em presença, comunicação e autoconhecimento.",
+  },
+  {
+    icon: Users2,
+    title: "Engenharia de Equipes",
+    desc: "Diagnóstico e otimização de times de alta performance, com intervenções desenhadas para o contexto e os desafios de cada empresa.",
+  },
+  {
+    icon: Award,
+    title: (
+      <>
+        Formação de Analista <em>DISC</em>
+      </>
+    ),
+    desc: "Certificação profissional para consultores, líderes e profissionais de RH que querem dominar a metodologia e ampliar sua atuação.",
+  },
+  {
     icon: Cpu,
     title: <em>IMPARGESTOR</em>,
     desc: "Plataforma com IA para gestão de pessoas: metas, avaliações, PDIs e indicadores num único lugar.",
@@ -81,6 +116,29 @@ const services = [
         Plataforma <em>white label</em> de consultoria e educação a distância.
       </>
     ),
+  },
+];
+
+const audiences = [
+  {
+    icon: Building2,
+    title: "Médias e Grandes Empresas",
+    desc: "Soluções premium em RH e desenvolvimento humano para organizações que buscam resultados consistentes e cultura de alta performance.",
+  },
+  {
+    icon: Briefcase,
+    title: "Profissionais de RH",
+    desc: (
+      <>
+        Mentorias e formações para profissionais CLT que querem dar o próximo passo e abrir a
+        própria consultoria, com o programa <em>Viva de RH</em>.
+      </>
+    ),
+  },
+  {
+    icon: UserCheck,
+    title: "Líderes e Executivos",
+    desc: "Desenvolvimento individual, coaching e mentoria para CEOs, diretores e líderes em momentos-chave de carreira e negócio.",
   },
 ];
 
@@ -124,6 +182,7 @@ function Index() {
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#quem-somos" className="hover:text-foreground">Quem somos</a>
             <a href="#servicos" className="hover:text-foreground">O que fazemos</a>
+            <a href="#para-quem" className="hover:text-foreground">Para quem</a>
             <a href="#diferenciais" className="hover:text-foreground">Por que ÍMPAR</a>
             <a href="#contato" className="hover:text-foreground">Contato</a>
           </nav>
@@ -145,11 +204,12 @@ function Index() {
               Desde 2002
             </span>
             <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] text-primary md:text-6xl">
-              Desenvolvimento de lideranças que geram resultados duradouros.
+              23 anos desenvolvendo pessoas. Agora, escalando com tecnologia.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Há 23 anos apoiamos CEOs, diretores e áreas de Gente e Gestão a formarem líderes
-              preparados e times de alta performance. Com método, escuta e tecnologia proprietária.
+              A ÍMPAR é uma consultoria premium de desenvolvimento humano. Servimos médias e
+              grandes empresas, profissionais de RH e líderes que buscam transformação real.
+              Combinamos diagnóstico, desenvolvimento e gestão em um ecossistema integrado.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -163,7 +223,7 @@ function Index() {
                 href="#servicos"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
               >
-                Conhecer soluções
+                Explorar soluções
               </a>
             </div>
           </div>
@@ -250,6 +310,10 @@ function Index() {
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
               Um portfólio integrado para desenvolver, mensurar e sustentar performance.
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Do diagnóstico comportamental à formação de novos consultores, da vivência
+              presencial à tecnologia proprietária. Um ecossistema completo de soluções.
+            </p>
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -269,8 +333,39 @@ function Index() {
         </div>
       </section>
 
+      {/* Para quem */}
+      <section id="para-quem" className="border-t border-border/60 bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Para quem</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
+              Soluções desenhadas para cada público.
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Atendemos organizações, profissionais e líderes com abordagens específicas para
+              cada momento e desafio.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {audiences.map(({ icon: Icon, title, desc }, i) => (
+              <article
+                key={i}
+                className="rounded-2xl border border-border bg-card p-7 transition hover:border-brand hover:shadow-lg"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand text-brand-foreground">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-5 font-display text-xl font-semibold text-primary">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Diferenciais */}
-      <section id="diferenciais" className="border-t border-border/60 bg-surface">
+      <section id="diferenciais" className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-widest text-brand">
@@ -301,14 +396,14 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-border/60">
+      <section className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
           <h2 className="font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-            Pronto para desenvolver a próxima geração de líderes da sua empresa?
+            Vamos desenhar a solução certa para o seu contexto?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Conversamos com CEOs, diretores e áreas de Gente e Gestão para desenhar o caminho
-            certo para o seu contexto.
+            Conversamos com organizações, profissionais de RH e líderes para entender o momento
+            e propor o caminho mais eficaz.
           </p>
           <a
             href="#contato"
@@ -376,6 +471,7 @@ function Index() {
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
               <li><a href="#quem-somos" className="hover:text-brand-soft">Quem somos</a></li>
               <li><a href="#servicos" className="hover:text-brand-soft">O que fazemos</a></li>
+              <li><a href="#para-quem" className="hover:text-brand-soft">Para quem</a></li>
               <li><a href="#diferenciais" className="hover:text-brand-soft">Por que ÍMPAR</a></li>
             </ul>
           </div>
