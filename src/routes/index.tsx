@@ -259,18 +259,15 @@ function Index() {
               23 anos formando líderes. Agora, escalando com tecnologia.
             </h2>
             <div className="mt-8 grid grid-cols-2 gap-4">
-              {["Suzi Souza", "Luiz Martins"].map((name, i) => (
+              {[
+                { name: "Suzi Souza", role: "Cofundadora, técnica", src: fotoSuzi },
+                { name: "Luiz Martins", role: "Cofundador, gestão", src: fotoLuiz },
+              ].map(({ name, role, src }) => (
                 <div key={name} className="overflow-hidden rounded-xl border border-border bg-card">
-                  <div className="aspect-square bg-gradient-to-br from-brand-soft to-accent">
-                    <div className="flex h-full items-center justify-center text-xs text-muted-foreground">
-                      Foto
-                    </div>
-                  </div>
+                  <img src={src} alt={name} className="aspect-square w-full object-cover" />
                   <div className="p-3">
                     <p className="text-sm font-semibold">{name}</p>
-                    <p className="text-xs text-muted-foreground">
-                      {i === 0 ? "Cofundadora, técnica" : "Cofundador, gestão"}
-                    </p>
+                    <p className="text-xs text-muted-foreground">{role}</p>
                   </div>
                 </div>
               ))}
