@@ -237,11 +237,11 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/5] w-full overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-brand-soft to-accent shadow-2xl">
-              <div className="flex h-full items-center justify-center text-sm text-muted-foreground">
-                <span className="rounded-md bg-card/70 px-3 py-1.5">Espaço reservado para foto</span>
-              </div>
-            </div>
+            <img
+              src={logoImpar}
+              alt="ÍMPAR"
+              className="aspect-[4/5] w-full rounded-2xl border border-border object-cover shadow-2xl"
+            />
             <div className="absolute -bottom-6 -left-6 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
               <p className="font-display text-3xl font-semibold text-brand">23</p>
               <p className="text-xs uppercase tracking-wider text-muted-foreground">anos de estrada</p>
