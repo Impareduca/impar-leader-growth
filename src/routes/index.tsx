@@ -184,8 +184,8 @@ function Index() {
       {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="font-display text-xl font-semibold tracking-tight">
-            ÍMPAR
+          <a href="#top" className="flex items-center">
+            <img src={logoImpar} alt="ÍMPAR" className="h-8 w-auto" />
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#quem-somos" className="hover:text-foreground">Quem somos</a>
