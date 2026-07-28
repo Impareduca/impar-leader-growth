@@ -8,7 +8,8 @@ type Props = {
 };
 
 const IMPAR_NAVY = "#1a3a4d";
-const IFRAME_URL = "https://imparadura.github.io/impar-form/form.html";
+const IFRAME_URL =
+  "https://cvanwvoddchatcdstwry.supabase.co/functions/v1/crm-webform-embed?id=a3213154-9f28-4ad3-8d80-c30f64768b44";
 
 export function LeadModal({ open, onClose }: Props) {
   useEffect(() => {
@@ -64,8 +65,11 @@ export function LeadModal({ open, onClose }: Props) {
           <iframe
             src={IFRAME_URL}
             title="Formulário de contato ÍMPAR"
+            width="100%"
+            height="450"
+            frameBorder="0"
             className="w-full border-0"
-            style={{ height: "700px", borderRadius: "8px", maxHeight: "calc(90vh - 180px)" }}
+            style={{ border: "none", maxWidth: "500px", margin: "0 auto", display: "block" }}
           />
         </div>
       </div>
