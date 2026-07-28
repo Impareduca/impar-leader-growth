@@ -56,39 +56,67 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const services = [
+const platforms = [
   {
     icon: Users,
-    title: (
-      <>
-        Avaliações comportamentais
-      </>
-    ),
+    title: <em>IMPARPERFIL</em>,
+    desc: "Plataforma de avaliação comportamental proprietária, com relatórios executivos e trilhas de desenvolvimento personalizadas.",
+  },
+  {
+    icon: GraduationCap,
+    title: <em>IMPAREDUCA</em>,
     desc: (
       <>
-        <em>DISC</em>, <em>IMPARPERFIL</em> e <em>STARTRUST Executive Advisor</em>. Mapeamento
-        profundo para decisões de contratação, sucessão e desenvolvimento.
+        Plataforma <em>white label</em> de consultoria e educação a distância, com trilhas
+        customizadas para cada organização.
       </>
     ),
   },
   {
-    icon: Compass,
-    title: "Mentorias",
-    desc: (
+    icon: Cpu,
+    title: <em>IMPARGESTOR</em>,
+    desc: "Plataforma com IA para gestão de pessoas: metas, avaliações, PDIs e indicadores num único lugar.",
+  },
+];
+
+const services = [
+  {
+    icon: Award,
+    title: (
       <>
-        Acompanhamento estratégico para líderes e para profissionais de RH que querem abrir a
-        própria consultoria, com o programa <em>Viva de RH</em>.
+        Avaliação <em>DISC</em> Executiva
       </>
     ),
+    desc: "Diagnóstico comportamental profundo para decisões de contratação, sucessão e desenvolvimento de executivos.",
   },
   {
     icon: Sparkles,
-    title: "Coaching",
-    desc: "Processos estruturados, individuais e em grupo, para desbloquear performance, autoliderança e clareza de propósito.",
+    title: "Coaching Executivo",
+    desc: "Processos individuais para CEOs e diretores, com foco em performance, autoliderança e clareza estratégica.",
+  },
+  {
+    icon: UserCheck,
+    title: "Coaching para Líderes",
+    desc: "Programas estruturados para média e nova liderança desenvolverem presença, gestão de pessoas e resultado.",
+  },
+  {
+    icon: Compass,
+    title: "Mentorias Profissionais",
+    desc: (
+      <>
+        Acompanhamento estratégico para líderes e profissionais de RH que querem abrir a própria
+        consultoria, com o programa <em>Viva de RH</em>.
+      </>
+    ),
+  },
+  {
+    icon: Users2,
+    title: "Workshops Comportamentais",
+    desc: "Encontros vivenciais para times desenvolverem comunicação, colaboração e engenharia de equipes.",
   },
   {
     icon: Presentation,
-    title: "Treinamentos e Palestras",
+    title: "Treinamentos In Company",
     desc: (
       <>
         Programas sob medida, presenciais e <em>online</em>, de liderança, comunicação,{" "}
@@ -97,39 +125,28 @@ const services = [
     ),
   },
   {
+    icon: Mountain,
+    title: "Palestras e Eventos",
+    desc: "Conteúdos autorais para convenções, kick-offs e encontros corporativos, com condução experiente e envolvente.",
+  },
+  {
     icon: Activity,
     title: "Análise Corporal",
     desc: "Leitura das dinâmicas corporais aplicada ao desenvolvimento de pessoas, com foco em presença, comunicação e autoconhecimento.",
   },
-  {
-    icon: Users2,
-    title: "Engenharia de Equipes",
-    desc: "Diagnóstico e otimização de times de alta performance, com intervenções desenhadas para o contexto e os desafios de cada empresa.",
-  },
-  {
-    icon: Award,
-    title: (
-      <>
-        Formação de Analista <em>DISC</em>
-      </>
-    ),
-    desc: "Certificação profissional para consultores, líderes e profissionais de RH que querem dominar a metodologia e ampliar sua atuação.",
-  },
-  {
-    icon: Cpu,
-    title: <em>IMPARGESTOR</em>,
-    desc: "Plataforma com IA para gestão de pessoas: metas, avaliações, PDIs e indicadores num único lugar.",
-  },
-  {
-    icon: GraduationCap,
-    title: <em>IMPAREDUCA</em>,
-    desc: (
-      <>
-        Plataforma <em>white label</em> de consultoria e educação a distância.
-      </>
-    ),
-  },
 ];
+
+const clientLogos = [
+  "ALBRAS",
+  "TRACBEL",
+  "Hydro",
+  "Würth",
+  "Aqualand",
+  "Supergiro",
+  "Rio Azul",
+  "Consag",
+];
+
 
 const audiences = [
   {
@@ -285,16 +302,23 @@ function Index() {
 
           <div className="space-y-6 md:col-span-3">
             <p className="text-lg leading-relaxed text-foreground/85">
-              A ÍMPAR nasceu em 2002. Desde a fundação já passou por transformações orientadas
-              para entregar transformação em seus clientes. Hoje resulta da união entre técnica e
-              gestão. Suzi Souza, especialista em comportamento humano, e Luiz Martins, à frente
-              da estratégia administrativa e financeira. Ao longo de mais de duas décadas
-              construímos uma metodologia própria e resultados consistentes com diversas empresas.
+              A ÍMPAR oferece soluções personalizadas para o desenvolvimento de líderes e
+              equipes, focando na transformação de desafios em oportunidades e na promoção de
+              equilíbrio, inovação e crescimento contínuo.
             </p>
             <p className="text-lg leading-relaxed text-foreground/85">
-              Em 2026, demos um novo passo: a transformação digital do desenvolvimento humano com
-              a plataforma <em>IMPARGESTOR</em>, integrando diagnóstico, aprendizagem e gestão de
-              pessoas em escala, sem perder o toque humano que sempre nos definiu.
+              Com 23 anos de experiência consolidada, a empresa combina metodologias comprovadas
+              com inovação tecnológica e toque humano. Nossos diferenciais: foco em soluções
+              adaptadas à realidade das empresas, acompanhamento especializado em liderança,
+              especialistas certificados em <em>Outdoor Training</em>, mentorias digitais para
+              públicos específicos (nova e média liderança, profissionais de RH) e uso de{" "}
+              <em>assessments</em> internacionais como <em>STARTRUST Executive Advisor</em>.
+            </p>
+            <p className="text-lg leading-relaxed text-foreground/85">
+              Atuamos em todo o território nacional com soluções <em>online</em>, além de
+              presença presencial regular nos estados do Norte e Nordeste. Nossa transformação é
+              real: trabalhamos com acompanhamento contínuo dos clientes, impulsionando sucesso
+              profissional e organizacional.
             </p>
 
             <div className="grid gap-4 pt-4 sm:grid-cols-2">
@@ -307,8 +331,9 @@ function Index() {
               <div className="rounded-xl border border-border bg-card p-6">
                 <p className="text-xs font-semibold uppercase tracking-widest text-brand">Visão</p>
                 <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                  Ser referência em desenvolvimento humano, unindo método comprovado e tecnologia
-                  proprietária.
+                  Consolidar a ÍMPAR como referência nacional no desenvolvimento de líderes,
+                  profissionais e empreendedores de RH, combinando experiência prática, formação
+                  estratégica e soluções digitais customizadas e aplicadas às organizações.
                 </p>
               </div>
             </div>
@@ -316,13 +341,103 @@ function Index() {
         </div>
       </section>
 
-      {/* Serviços */}
-      <section id="servicos" className="border-t border-border/60">
+      {/* Saiba Mais - Bios */}
+      <section id="saiba-mais" className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">O que fazemos</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Saiba mais</p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              Um portfólio integrado para desenvolver, mensurar e sustentar performance.
+              Quem lidera a ÍMPAR.
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Duas trajetórias complementares que sustentam a nossa forma de fazer consultoria.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-10 md:grid-cols-2">
+            <article className="rounded-2xl border border-border bg-card p-8">
+              <div className="flex items-center gap-5">
+                <img
+                  src={fotoSuzi}
+                  alt="Suzi Souza"
+                  className="h-20 w-20 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
+                  <p className="text-sm text-brand">Proprietária e Diretora Técnica</p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
+                <p>
+                  Psicóloga Organizacional, Mestre em Recursos Humanos e Gestão do Conhecimento,
+                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS.
+                  Proprietária da ÍMPAR Desenvolvimento de Pessoas, com mais de 30 anos de atuação
+                  em Recursos Humanos em empresas de grande e médio portes.
+                </p>
+                <p>
+                  Atua como Docente de Pós-Graduação (MBA) no Centro Universitário UNIFTEC,{" "}
+                  <em>Executive Coach</em>, Mentora de Profissionais de RH, <em>Coach</em> de
+                  Líderes, instrutora de cursos e palestras na área comportamental, formação de
+                  gestores e desenvolvimento de equipes.
+                </p>
+                <p>
+                  <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
+                  O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
+                  Excelência em <em>Coaching</em>. Com capacitação para Treinamentos ao Ar Livre
+                  pela <em>Outward Bound Brasil</em>.
+                </p>
+                <p>
+                  Experiência em Têxtil Renner Vicunha (RS), Perdigão Agroindustrial (SC), Telet
+                  (RS), Amazônia Celular (PA) e CREA (PA). Diretora de Educação da ABRH-PA.
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-2xl border border-border bg-card p-8">
+              <div className="flex items-center gap-5">
+                <img
+                  src={fotoLuiz}
+                  alt="Luiz Cláudio Martins"
+                  className="h-20 w-20 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-primary">
+                    Luiz Cláudio Martins
+                  </h3>
+                  <p className="text-sm text-brand">Diretor de Negócios</p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
+                <p>
+                  <em>Coach</em> Bilíngue, <em>Master</em> Analista de Perfil Comportamental{" "}
+                  <em>DiSC</em> e Analista de Engenharia de Equipes. Instrutor de treinamento e
+                  Mentor em Desenvolvimento de Pessoas.
+                </p>
+                <p>
+                  <em>Outdoor Training Instructor</em> pela <em>Outward Bound Brasil</em> para
+                  condução de atividades Vivenciais ao Ar Livre e processamento de dinâmicas
+                  (CAV), com certificação em Primeiros Socorros e Cuidados Médicos.
+                </p>
+                <p>
+                  Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
+                  Professor de Língua Inglesa, com quatro anos de experiência no mercado de ações
+                  em Londres. Atualmente Líder do Núcleo Setorial de Gestão Organizacional na
+                  Associação Comercial do Pará.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Soluções */}
+      <section id="servicos" className="border-t border-border/60 bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Soluções</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
+              Plataformas proprietárias e serviços de consultoria.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Do diagnóstico comportamental à formação de novos consultores, da vivência
@@ -330,22 +445,82 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, desc }, i) => (
-              <article
+          {/* Plataformas */}
+          <div className="mt-14">
+            <div className="flex items-baseline justify-between">
+              <h3 className="font-display text-2xl font-semibold text-primary">Plataformas</h3>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                Tecnologia ÍMPAR
+              </span>
+            </div>
+            <div className="mt-6 grid gap-6 md:grid-cols-3">
+              {platforms.map(({ icon: Icon, title, desc }, i) => (
+                <article
+                  key={i}
+                  className="group rounded-2xl border border-border bg-card p-7 transition hover:border-brand hover:shadow-lg"
+                >
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand text-brand-foreground">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h4 className="mt-5 font-display text-xl font-semibold text-primary">{title}</h4>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* Serviços */}
+          <div className="mt-16">
+            <div className="flex items-baseline justify-between">
+              <h3 className="font-display text-2xl font-semibold text-primary">Serviços</h3>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                Consultoria e desenvolvimento
+              </span>
+            </div>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {services.map(({ icon: Icon, title, desc }, i) => (
+                <article
+                  key={i}
+                  className="group rounded-2xl border border-border bg-card p-6 transition hover:border-brand hover:shadow-lg"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h4 className="mt-4 font-display text-base font-semibold text-primary">{title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Carrossel de clientes */}
+      <section className="border-t border-border/60">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Clientes</p>
+            <h2 className="mt-3 font-display text-2xl font-semibold text-primary md:text-3xl">
+              Empresas que confiam na ÍMPAR
+            </h2>
+          </div>
+        </div>
+        <div className="relative overflow-hidden pb-16">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+          <div className="flex w-max animate-marquee items-center gap-16 px-8">
+            {[...clientLogos, ...clientLogos].map((name, i) => (
+              <div
                 key={i}
-                className="group rounded-2xl border border-border bg-card p-7 transition hover:border-brand hover:shadow-lg"
+                className="flex h-16 min-w-[160px] items-center justify-center rounded-lg border border-border/60 bg-card px-8 font-display text-lg font-semibold uppercase tracking-widest text-muted-foreground transition hover:text-brand"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-soft text-brand">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-5 font-display text-xl font-semibold text-primary">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              </article>
+                {name}
+              </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Para quem */}
       <section id="para-quem" className="border-t border-border/60 bg-surface">
