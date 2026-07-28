@@ -228,13 +228,14 @@ function Index() {
               Combinamos diagnóstico, desenvolvimento e gestão em um ecossistema integrado.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#contato"
+              <button
+                type="button"
+                onClick={openModal}
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-medium text-brand-foreground shadow-lg shadow-brand/20 transition hover:opacity-90"
               >
                 Converse com a ÍMPAR
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </button>
               <a
                 href="#servicos"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
