@@ -8,7 +8,8 @@ type Props = {
 };
 
 const IMPAR_NAVY = "#1a3a4d";
-const IFRAME_URL = "https://imparadura.github.io/impar-form/form.html";
+const IFRAME_URL =
+  "https://cvanwvoddchatcdstwry.supabase.co/functions/v1/crm-webform-embed?id=a3213154-9f28-4ad3-8d80-c30f64768b44";
 
 export function LeadModal({ open, onClose }: Props) {
   useEffect(() => {
