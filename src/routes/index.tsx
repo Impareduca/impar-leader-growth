@@ -432,12 +432,17 @@ function Index() {
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
           <div className="flex w-max animate-marquee items-center gap-16 px-8">
-            {[...clientLogos, ...clientLogos].map((name, i) => (
+            {[...clientLogos, ...clientLogos].map((logo, i) => (
               <div
                 key={i}
-                className="flex h-16 min-w-[160px] items-center justify-center rounded-lg border border-border/60 bg-card px-8 font-display text-lg font-semibold uppercase tracking-widest text-muted-foreground transition hover:text-brand"
+                className="flex h-24 min-w-[180px] items-center justify-center px-6"
               >
-                {name}
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="max-h-20 w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
