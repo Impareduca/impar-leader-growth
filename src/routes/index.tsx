@@ -431,13 +431,13 @@ function Index() {
       </section>
 
 
-      {/* Serviços */}
-      <section id="servicos" className="border-t border-border/60">
+      {/* Soluções */}
+      <section id="servicos" className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">O que fazemos</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Soluções</p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              Um portfólio integrado para desenvolver, mensurar e sustentar performance.
+              Plataformas proprietárias e serviços de consultoria.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Do diagnóstico comportamental à formação de novos consultores, da vivência
@@ -445,22 +445,82 @@ function Index() {
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map(({ icon: Icon, title, desc }, i) => (
-              <article
+          {/* Plataformas */}
+          <div className="mt-14">
+            <div className="flex items-baseline justify-between">
+              <h3 className="font-display text-2xl font-semibold text-primary">Plataformas</h3>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                Tecnologia ÍMPAR
+              </span>
+            </div>
+            <div className="mt-6 grid gap-6 md:grid-cols-3">
+              {platforms.map(({ icon: Icon, title, desc }, i) => (
+                <article
+                  key={i}
+                  className="group rounded-2xl border border-border bg-card p-7 transition hover:border-brand hover:shadow-lg"
+                >
+                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand text-brand-foreground">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h4 className="mt-5 font-display text-xl font-semibold text-primary">{title}</h4>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* Serviços */}
+          <div className="mt-16">
+            <div className="flex items-baseline justify-between">
+              <h3 className="font-display text-2xl font-semibold text-primary">Serviços</h3>
+              <span className="text-xs uppercase tracking-widest text-muted-foreground">
+                Consultoria e desenvolvimento
+              </span>
+            </div>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {services.map(({ icon: Icon, title, desc }, i) => (
+                <article
+                  key={i}
+                  className="group rounded-2xl border border-border bg-card p-6 transition hover:border-brand hover:shadow-lg"
+                >
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <h4 className="mt-4 font-display text-base font-semibold text-primary">{title}</h4>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Carrossel de clientes */}
+      <section className="border-t border-border/60">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <div className="text-center">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Clientes</p>
+            <h2 className="mt-3 font-display text-2xl font-semibold text-primary md:text-3xl">
+              Empresas que confiam na ÍMPAR
+            </h2>
+          </div>
+        </div>
+        <div className="relative overflow-hidden pb-16">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+          <div className="flex w-max animate-marquee items-center gap-16 px-8">
+            {[...clientLogos, ...clientLogos].map((name, i) => (
+              <div
                 key={i}
-                className="group rounded-2xl border border-border bg-card p-7 transition hover:border-brand hover:shadow-lg"
+                className="flex h-16 min-w-[160px] items-center justify-center rounded-lg border border-border/60 bg-card px-8 font-display text-lg font-semibold uppercase tracking-widest text-muted-foreground transition hover:text-brand"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-brand-soft text-brand">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <h3 className="mt-5 font-display text-xl font-semibold text-primary">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-              </article>
+                {name}
+              </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Para quem */}
       <section id="para-quem" className="border-t border-border/60 bg-surface">
