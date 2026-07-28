@@ -56,39 +56,67 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-const services = [
+const platforms = [
   {
     icon: Users,
-    title: (
-      <>
-        Avaliações comportamentais
-      </>
-    ),
+    title: <em>IMPARPERFIL</em>,
+    desc: "Plataforma de avaliação comportamental proprietária, com relatórios executivos e trilhas de desenvolvimento personalizadas.",
+  },
+  {
+    icon: GraduationCap,
+    title: <em>IMPAREDUCA</em>,
     desc: (
       <>
-        <em>DISC</em>, <em>IMPARPERFIL</em> e <em>STARTRUST Executive Advisor</em>. Mapeamento
-        profundo para decisões de contratação, sucessão e desenvolvimento.
+        Plataforma <em>white label</em> de consultoria e educação a distância, com trilhas
+        customizadas para cada organização.
       </>
     ),
   },
   {
-    icon: Compass,
-    title: "Mentorias",
-    desc: (
+    icon: Cpu,
+    title: <em>IMPARGESTOR</em>,
+    desc: "Plataforma com IA para gestão de pessoas: metas, avaliações, PDIs e indicadores num único lugar.",
+  },
+];
+
+const services = [
+  {
+    icon: Award,
+    title: (
       <>
-        Acompanhamento estratégico para líderes e para profissionais de RH que querem abrir a
-        própria consultoria, com o programa <em>Viva de RH</em>.
+        Avaliação <em>DISC</em> Executiva
       </>
     ),
+    desc: "Diagnóstico comportamental profundo para decisões de contratação, sucessão e desenvolvimento de executivos.",
   },
   {
     icon: Sparkles,
-    title: "Coaching",
-    desc: "Processos estruturados, individuais e em grupo, para desbloquear performance, autoliderança e clareza de propósito.",
+    title: "Coaching Executivo",
+    desc: "Processos individuais para CEOs e diretores, com foco em performance, autoliderança e clareza estratégica.",
+  },
+  {
+    icon: UserCheck,
+    title: "Coaching para Líderes",
+    desc: "Programas estruturados para média e nova liderança desenvolverem presença, gestão de pessoas e resultado.",
+  },
+  {
+    icon: Compass,
+    title: "Mentorias Profissionais",
+    desc: (
+      <>
+        Acompanhamento estratégico para líderes e profissionais de RH que querem abrir a própria
+        consultoria, com o programa <em>Viva de RH</em>.
+      </>
+    ),
+  },
+  {
+    icon: Users2,
+    title: "Workshops Comportamentais",
+    desc: "Encontros vivenciais para times desenvolverem comunicação, colaboração e engenharia de equipes.",
   },
   {
     icon: Presentation,
-    title: "Treinamentos e Palestras",
+    title: "Treinamentos In Company",
     desc: (
       <>
         Programas sob medida, presenciais e <em>online</em>, de liderança, comunicação,{" "}
@@ -97,39 +125,28 @@ const services = [
     ),
   },
   {
+    icon: Mountain,
+    title: "Palestras e Eventos",
+    desc: "Conteúdos autorais para convenções, kick-offs e encontros corporativos, com condução experiente e envolvente.",
+  },
+  {
     icon: Activity,
     title: "Análise Corporal",
     desc: "Leitura das dinâmicas corporais aplicada ao desenvolvimento de pessoas, com foco em presença, comunicação e autoconhecimento.",
   },
-  {
-    icon: Users2,
-    title: "Engenharia de Equipes",
-    desc: "Diagnóstico e otimização de times de alta performance, com intervenções desenhadas para o contexto e os desafios de cada empresa.",
-  },
-  {
-    icon: Award,
-    title: (
-      <>
-        Formação de Analista <em>DISC</em>
-      </>
-    ),
-    desc: "Certificação profissional para consultores, líderes e profissionais de RH que querem dominar a metodologia e ampliar sua atuação.",
-  },
-  {
-    icon: Cpu,
-    title: <em>IMPARGESTOR</em>,
-    desc: "Plataforma com IA para gestão de pessoas: metas, avaliações, PDIs e indicadores num único lugar.",
-  },
-  {
-    icon: GraduationCap,
-    title: <em>IMPAREDUCA</em>,
-    desc: (
-      <>
-        Plataforma <em>white label</em> de consultoria e educação a distância.
-      </>
-    ),
-  },
 ];
+
+const clientLogos = [
+  "ALBRAS",
+  "TRACBEL",
+  "Hydro",
+  "Würth",
+  "Aqualand",
+  "Supergiro",
+  "Rio Azul",
+  "Consag",
+];
+
 
 const audiences = [
   {
