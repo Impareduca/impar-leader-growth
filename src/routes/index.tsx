@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { LeadModal } from "@/components/LeadModal";
 import {
   ArrowRight,
   Users,
@@ -181,8 +183,11 @@ const differentials = [
 ];
 
 function Index() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const openModal = () => setModalOpen(true);
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
       {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -196,12 +201,13 @@ function Index() {
             <a href="#diferenciais" className="hover:text-foreground">Por que ÍMPAR</a>
             <a href="#contato" className="hover:text-foreground">Contato</a>
           </nav>
-          <a
-            href="#contato"
+          <button
+            type="button"
+            onClick={openModal}
             className="hidden rounded-full bg-primary px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 md:inline-flex"
           >
             Fale conosco
-          </a>
+          </button>
         </div>
       </header>
 
@@ -222,13 +228,14 @@ function Index() {
               Combinamos diagnóstico, desenvolvimento e gestão em um ecossistema integrado.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#contato"
+              <button
+                type="button"
+                onClick={openModal}
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-medium text-brand-foreground shadow-lg shadow-brand/20 transition hover:opacity-90"
               >
                 Converse com a ÍMPAR
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </button>
               <a
                 href="#servicos"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
@@ -412,13 +419,14 @@ function Index() {
             Conversamos com organizações, profissionais de RH e líderes para entender o momento
             e propor o caminho mais eficaz.
           </p>
-          <a
-            href="#contato"
+          <button
+            type="button"
+            onClick={openModal}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-medium text-brand-foreground shadow-lg shadow-brand/20 transition hover:opacity-90"
           >
             Converse com a ÍMPAR
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </button>
         </div>
       </section>
 
