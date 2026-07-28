@@ -34,8 +34,8 @@ export function LeadModal({ open, onClose }: Props) {
       aria-labelledby="lead-modal-title"
     >
       <div
-        className="relative w-full max-w-2xl overflow-hidden bg-white shadow-2xl animate-scale-in"
-        style={{ borderRadius: "12px" }}
+        className="relative flex w-full max-w-2xl flex-col overflow-hidden bg-white shadow-2xl animate-scale-in"
+        style={{ borderRadius: "12px", maxHeight: "90vh" }}
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -60,12 +60,12 @@ export function LeadModal({ open, onClose }: Props) {
           </p>
         </div>
 
-        <div className="px-2 pb-4 sm:px-4">
+        <div className="flex-1 overflow-y-auto px-2 pb-4 sm:px-4">
           <iframe
             src={IFRAME_URL}
             title="Formulário de contato ÍMPAR"
             className="w-full border-0"
-            style={{ height: "700px", borderRadius: "8px" }}
+            style={{ height: "700px", borderRadius: "8px", maxHeight: "calc(90vh - 180px)" }}
           />
         </div>
       </div>
