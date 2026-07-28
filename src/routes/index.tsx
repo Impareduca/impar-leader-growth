@@ -441,7 +441,7 @@ function Index() {
                   src={logo.src}
                   alt={logo.name}
                   className={`w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 ${
-                    logo.name === "Hydro" ? "max-h-28 scale-110" : "max-h-20"
+                    logo.name === "Hydro" ? "max-h-28 scale-[1.6]" : "max-h-20"
                   }`}
                   loading="lazy"
                 />
