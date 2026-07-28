@@ -183,7 +183,6 @@ const differentials = [
 ];
 
 function Index() {
-  return (
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
   return (
