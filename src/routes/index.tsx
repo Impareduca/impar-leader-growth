@@ -179,7 +179,7 @@ const differentials = [
   },
   {
     icon: Mountain,
-    title: "Líderes certificados em Outdoor Training",
+    title: "Certificados em Outdoor Training",
     desc: "Metodologias vivenciais conduzidas por especialistas certificados. Aprendizado que fica no corpo, não só no slide.",
   },
   {
@@ -316,7 +316,7 @@ function Index() {
             </p>
             <p className="text-lg leading-relaxed text-foreground/85">
               Atuamos em todo o território nacional com soluções <em>online</em>, além de
-              presença presencial regular nos estados do Norte e Nordeste. Nossa transformação é
+              presença regular nos estados do Norte e Nordeste. Nossa transformação é
               real: trabalhamos com acompanhamento contínuo dos clientes, impulsionando sucesso
               profissional e organizacional.
             </p>
@@ -341,94 +341,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Saiba Mais - Bios */}
-      <section id="saiba-mais" className="border-t border-border/60">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">Saiba mais</p>
-            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              Quem lidera a ÍMPAR.
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Duas trajetórias complementares que sustentam a nossa forma de fazer consultoria.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-10 md:grid-cols-2">
-            <article className="rounded-2xl border border-border bg-card p-8">
-              <div className="flex items-center gap-5">
-                <img
-                  src={fotoSuzi}
-                  alt="Suzi Souza"
-                  className="h-20 w-20 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
-                  <p className="text-sm text-brand">Proprietária e Diretora Técnica</p>
-                </div>
-              </div>
-              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
-                <p>
-                  Psicóloga Organizacional, Mestre em Recursos Humanos e Gestão do Conhecimento,
-                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS.
-                  Proprietária da ÍMPAR Desenvolvimento de Pessoas, com mais de 30 anos de atuação
-                  em Recursos Humanos em empresas de grande e médio portes.
-                </p>
-                <p>
-                  Atua como Docente de Pós-Graduação (MBA) no Centro Universitário UNIFTEC,{" "}
-                  <em>Executive Coach</em>, Mentora de Profissionais de RH, <em>Coach</em> de
-                  Líderes, instrutora de cursos e palestras na área comportamental, formação de
-                  gestores e desenvolvimento de equipes.
-                </p>
-                <p>
-                  <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
-                  O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
-                  Excelência em <em>Coaching</em>. Com capacitação para Treinamentos ao Ar Livre
-                  pela <em>Outward Bound Brasil</em>.
-                </p>
-                <p>
-                  Experiência em Têxtil Renner Vicunha (RS), Perdigão Agroindustrial (SC), Telet
-                  (RS), Amazônia Celular (PA) e CREA (PA). Diretora de Educação da ABRH-PA.
-                </p>
-              </div>
-            </article>
-
-            <article className="rounded-2xl border border-border bg-card p-8">
-              <div className="flex items-center gap-5">
-                <img
-                  src={fotoLuiz}
-                  alt="Luiz Cláudio Martins"
-                  className="h-20 w-20 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-display text-2xl font-semibold text-primary">
-                    Luiz Cláudio Martins
-                  </h3>
-                  <p className="text-sm text-brand">Diretor de Negócios</p>
-                </div>
-              </div>
-              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
-                <p>
-                  <em>Coach</em> Bilíngue, <em>Master</em> Analista de Perfil Comportamental{" "}
-                  <em>DiSC</em> e Analista de Engenharia de Equipes. Instrutor de treinamento e
-                  Mentor em Desenvolvimento de Pessoas.
-                </p>
-                <p>
-                  <em>Outdoor Training Instructor</em> pela <em>Outward Bound Brasil</em> para
-                  condução de atividades Vivenciais ao Ar Livre e processamento de dinâmicas
-                  (CAV), com certificação em Primeiros Socorros e Cuidados Médicos.
-                </p>
-                <p>
-                  Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
-                  Professor de Língua Inglesa, com quatro anos de experiência no mercado de ações
-                  em Londres. Atualmente Líder do Núcleo Setorial de Gestão Organizacional na
-                  Associação Comercial do Pará.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
 
 
       {/* Soluções */}
@@ -604,6 +516,96 @@ function Index() {
           </button>
         </div>
       </section>
+
+      {/* Saiba Mais - Bios */}
+      <section id="saiba-mais" className="border-t border-border/60 bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Saiba mais</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
+              Quem lidera a ÍMPAR.
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Duas trajetórias complementares que sustentam a nossa forma de fazer consultoria.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-10 md:grid-cols-2">
+            <article className="rounded-2xl border border-border bg-card p-8">
+              <div className="flex items-center gap-5">
+                <img
+                  src={fotoSuzi}
+                  alt="Suzi Souza"
+                  className="h-20 w-20 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
+                  <p className="text-sm text-brand">Proprietária e Diretora Técnica</p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
+                <p>
+                  Psicóloga Organizacional, Mestre em Recursos Humanos e Gestão do Conhecimento,
+                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS.
+                  Proprietária da ÍMPAR Desenvolvimento de Pessoas, com mais de 30 anos de atuação
+                  em Recursos Humanos em empresas de grande e médio portes.
+                </p>
+                <p>
+                  Atua como Docente de Pós-Graduação (MBA) no Centro Universitário UNIFTEC,{" "}
+                  <em>Executive Coach</em>, Mentora de Profissionais de RH, <em>Coach</em> de
+                  Líderes, instrutora de cursos e palestras na área comportamental, formação de
+                  gestores e desenvolvimento de equipes.
+                </p>
+                <p>
+                  <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
+                  O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
+                  Excelência em <em>Coaching</em>. Com capacitação para Treinamentos ao Ar Livre
+                  pela <em>Outward Bound Brasil</em>.
+                </p>
+                <p>
+                  Experiência em Têxtil Renner Vicunha (RS), Perdigão Agroindustrial (SC), Telet
+                  (RS), Amazônia Celular (PA) e CREA (PA). Diretora de Educação da ABRH-PA.
+                </p>
+              </div>
+            </article>
+
+            <article className="rounded-2xl border border-border bg-card p-8">
+              <div className="flex items-center gap-5">
+                <img
+                  src={fotoLuiz}
+                  alt="Luiz Cláudio Martins"
+                  className="h-20 w-20 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-primary">
+                    Luiz Cláudio Martins
+                  </h3>
+                  <p className="text-sm text-brand">Diretor de Negócios</p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
+                <p>
+                  <em>Coach</em> Bilíngue, <em>Master</em> Analista de Perfil Comportamental{" "}
+                  <em>DiSC</em> e Analista de Engenharia de Equipes. Instrutor de treinamento e
+                  Mentor em Desenvolvimento de Pessoas.
+                </p>
+                <p>
+                  <em>Outdoor Training Instructor</em> pela <em>Outward Bound Brasil</em> para
+                  condução de atividades Vivenciais ao Ar Livre e processamento de dinâmicas
+                  (CAV), com certificação em Primeiros Socorros e Cuidados Médicos.
+                </p>
+                <p>
+                  Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
+                  Professor de Língua Inglesa, com quatro anos de experiência no mercado de ações
+                  em Londres. Atualmente Líder do Núcleo Setorial de Gestão Organizacional na
+                  Associação Comercial do Pará.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
 
       {/* Footer / Contato */}
       <footer id="contato" className="border-t border-border/60 bg-primary text-primary-foreground">
