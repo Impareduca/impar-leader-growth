@@ -148,14 +148,14 @@ const services = [
 ];
 
 const clientLogos = [
-  "ALBRAS",
-  "TRACBEL",
-  "Hydro",
-  "Würth",
-  "Aqualand",
-  "Supergiro",
-  "Rio Azul",
-  "Consag",
+  { name: "ALBRAS", src: albrasAsset.url },
+  { name: "TRACBEL", src: tracbelAsset.url },
+  { name: "Hydro", src: hydroAsset.url },
+  { name: "Würth", src: wurthAsset.url },
+  { name: "Aqualand", src: aqualandAsset.url },
+  { name: "Supergiro", src: supergiroAsset.url },
+  { name: "Rio Azul", src: rioazulAsset.url },
+  { name: "Consag", src: consagAsset.url },
 ];
 
 
