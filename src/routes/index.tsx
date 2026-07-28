@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { LeadModal } from "@/components/LeadModal";
+import heroAsset from "@/assets/hero.jpg.asset.json";
+import suziAsset from "@/assets/suzi.jpg.asset.json";
+import luizAsset from "@/assets/luiz.jpg.asset.json";
 import {
   ArrowRight,
   Users,
