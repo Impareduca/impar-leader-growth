@@ -65,8 +65,11 @@ export function LeadModal({ open, onClose }: Props) {
           <iframe
             src={IFRAME_URL}
             title="Formulário de contato ÍMPAR"
+            width="100%"
+            height="450"
+            frameBorder="0"
             className="w-full border-0"
-            style={{ height: "700px", borderRadius: "8px", maxHeight: "calc(90vh - 180px)" }}
+            style={{ border: "none", maxWidth: "500px", margin: "0 auto", display: "block" }}
           />
         </div>
       </div>
