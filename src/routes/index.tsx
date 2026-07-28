@@ -267,7 +267,7 @@ function Index() {
 
           <div className="relative">
             <img
-              src={logoImpar}
+              src={imagemHero}
               alt="ÍMPAR"
               className="aspect-[4/5] w-full rounded-2xl border border-border object-cover shadow-2xl"
             />
