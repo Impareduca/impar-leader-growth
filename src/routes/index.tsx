@@ -419,13 +419,14 @@ function Index() {
             Conversamos com organizações, profissionais de RH e líderes para entender o momento
             e propor o caminho mais eficaz.
           </p>
-          <a
-            href="#contato"
+          <button
+            type="button"
+            onClick={openModal}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand px-7 py-3.5 text-sm font-medium text-brand-foreground shadow-lg shadow-brand/20 transition hover:opacity-90"
           >
             Converse com a ÍMPAR
             <ArrowRight className="h-4 w-4" />
-          </a>
+          </button>
         </div>
       </section>
 
