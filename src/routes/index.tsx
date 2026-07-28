@@ -4,6 +4,14 @@ import { LeadModal } from "@/components/LeadModal";
 import heroAsset from "@/assets/hero.jpg.asset.json";
 import suziAsset from "@/assets/suzi.jpg.asset.json";
 import luizAsset from "@/assets/luiz.jpg.asset.json";
+import albrasAsset from "@/assets/clients/albras.jpg.asset.json";
+import tracbelAsset from "@/assets/clients/tracbel.png.asset.json";
+import hydroAsset from "@/assets/clients/hydro.png.asset.json";
+import wurthAsset from "@/assets/clients/wurth.jpg.asset.json";
+import aqualandAsset from "@/assets/clients/aqualand.png.asset.json";
+import supergiroAsset from "@/assets/clients/supergiro.png.asset.json";
+import rioazulAsset from "@/assets/clients/rioazul.png.asset.json";
+import consagAsset from "@/assets/clients/consag.png.asset.json";
 import {
   ArrowRight,
   Users,
