@@ -179,7 +179,7 @@ const differentials = [
   },
   {
     icon: Mountain,
-    title: "Líderes certificados em Outdoor Training",
+    title: "Certificados em Outdoor Training",
     desc: "Metodologias vivenciais conduzidas por especialistas certificados. Aprendizado que fica no corpo, não só no slide.",
   },
   {
@@ -316,7 +316,7 @@ function Index() {
             </p>
             <p className="text-lg leading-relaxed text-foreground/85">
               Atuamos em todo o território nacional com soluções <em>online</em>, além de
-              presença presencial regular nos estados do Norte e Nordeste. Nossa transformação é
+              presença regular nos estados do Norte e Nordeste. Nossa transformação é
               real: trabalhamos com acompanhamento contínuo dos clientes, impulsionando sucesso
               profissional e organizacional.
             </p>
