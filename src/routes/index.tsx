@@ -224,6 +224,7 @@ function Index() {
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#quem-somos" className="hover:text-foreground">Quem somos</a>
+            <a href="#quem-lidera" className="hover:text-foreground">Quem lidera</a>
             <a href="#servicos" className="hover:text-foreground">O que fazemos</a>
             <a href="#para-quem" className="hover:text-foreground">Para quem</a>
             <a href="#diferenciais" className="hover:text-foreground">Por que ÍMPAR</a>
@@ -287,67 +288,150 @@ function Index() {
         </div>
       </section>
 
-      {/* Quem somos */}
+      {/* Carrossel de clientes - prova social logo após o hero */}
+      <section className="border-t border-border/60">
+        <div className="mx-auto max-w-6xl px-6 pt-12">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Empresas que confiam na ÍMPAR
+          </p>
+        </div>
+        <div className="relative overflow-hidden py-10">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
+          <div className="flex w-max animate-marquee items-center gap-16 px-8">
+            {[...clientLogos, ...clientLogos].map((logo, i) => (
+              <div
+                key={i}
+                className="flex h-24 min-w-[180px] items-center justify-center px-6"
+              >
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className={`w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 ${
+                    logo.name === "Hydro" ? "max-h-28 scale-[1.6]" : "max-h-20"
+                  }`}
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quem somos - institucional, enxuto */}
       <section id="quem-somos" className="border-t border-border/60 bg-surface">
-        <div className="mx-auto grid max-w-6xl gap-14 px-6 py-24 md:grid-cols-5">
-          <div className="md:col-span-2">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">Quem somos</p>
-            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              23 anos formando líderes. Agora, escalando com tecnologia.
-            </h2>
-            <div className="mt-8 grid grid-cols-2 gap-4">
-              {[
-                { name: "Suzi Souza", role: "Cofundadora, técnica", src: fotoSuzi },
-                { name: "Luiz Martins", role: "Cofundador, gestão", src: fotoLuiz },
-              ].map(({ name, role, src }) => (
-                <div key={name} className="overflow-hidden rounded-xl border border-border bg-card">
-                  <img src={src} alt={name} className="aspect-square w-full object-cover" />
-                  <div className="p-3">
-                    <p className="text-sm font-semibold">{name}</p>
-                    <p className="text-xs text-muted-foreground">{role}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="mx-auto max-w-4xl px-6 py-20 text-center">
+          <p className="text-sm font-medium uppercase tracking-widest text-brand">Quem somos</p>
+          <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
+            Método, presença e tecnologia a serviço de quem forma pessoas.
+          </h2>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground/85">
+            Combinamos metodologias comprovadas com inovação tecnológica e toque humano,
+            atuando em todo o território nacional com soluções <em>online</em> e presença
+            regular nos estados do Norte e Nordeste.
+          </p>
+
+          <div className="mx-auto mt-10 grid max-w-2xl gap-4 text-left sm:grid-cols-2">
+            <div className="rounded-xl border border-border bg-card p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-brand">Missão</p>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+                Desenvolver pessoas para que organizações prosperem com consciência e resultado.
+              </p>
+            </div>
+            <div className="rounded-xl border border-border bg-card p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-brand">Visão</p>
+              <p className="mt-2 text-sm leading-relaxed text-foreground/85">
+                Consolidar a ÍMPAR como referência nacional no desenvolvimento de líderes,
+                profissionais e empreendedores de RH.
+              </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="space-y-6 md:col-span-3">
-            <p className="text-lg leading-relaxed text-foreground/85">
-              A ÍMPAR oferece soluções personalizadas para o desenvolvimento de líderes e
-              equipes, focando na transformação de desafios em oportunidades e na promoção de
-              equilíbrio, inovação e crescimento contínuo.
-            </p>
-            <p className="text-lg leading-relaxed text-foreground/85">
-              Com 23 anos de experiência consolidada, a empresa combina metodologias comprovadas
-              com inovação tecnológica e toque humano. Nossos diferenciais: foco em soluções
-              adaptadas à realidade das empresas, acompanhamento especializado em liderança,
-              especialistas certificados em <em>Outdoor Training</em>, mentorias digitais para
-              públicos específicos (nova e média liderança, profissionais de RH) e uso de{" "}
-              <em>assessments</em> internacionais como <em>STARTRUST Executive Advisor</em>.
-            </p>
-            <p className="text-lg leading-relaxed text-foreground/85">
-              Atuamos em todo o território nacional com soluções <em>online</em>, além de
-              presença regular nos estados do Norte e Nordeste. Nossa transformação é
-              real: trabalhamos com acompanhamento contínuo dos clientes, impulsionando sucesso
-              profissional e organizacional.
-            </p>
+      {/* Quem lidera - bios reais, Suzi em destaque */}
+      <section id="quem-lidera" className="border-t border-border/60">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Quem lidera</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
+              Duas trajetórias complementares.
+            </h2>
+          </div>
 
-            <div className="grid gap-4 pt-4 sm:grid-cols-2">
-              <div className="rounded-xl border border-border bg-card p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-brand">Missão</p>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                  Desenvolver pessoas para que organizações prosperem com consciência e resultado.
+          <div className="mt-14 grid gap-8 lg:grid-cols-5">
+            <article className="rounded-2xl border border-border bg-card p-8 lg:col-span-3">
+              <div className="flex items-center gap-5">
+                <img
+                  src={fotoSuzi}
+                  alt="Suzi Souza"
+                  className="h-24 w-24 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
+                  <p className="text-sm text-brand">Proprietária e Diretora Técnica e Comercial</p>
+                </div>
+              </div>
+              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
+                <p>
+                  Psicóloga Organizacional, Mestre em Recursos Humanos e Gestão do Conhecimento,
+                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS.
+                  Proprietária da ÍMPAR Desenvolvimento de Pessoas, com mais de 30 anos de atuação
+                  em Recursos Humanos em empresas de grande e médio portes.
+                </p>
+                <p>
+                  Atua como Docente de Pós-Graduação (MBA) no Centro Universitário UNIFTEC,{" "}
+                  <em>Executive Coach</em>, Mentora de Profissionais de RH, <em>Coach</em> de
+                  Líderes, instrutora de cursos e palestras na área comportamental, formação de
+                  gestores e desenvolvimento de equipes.
+                </p>
+                <p>
+                  <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
+                  O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
+                  Excelência em <em>Coaching</em>. Com capacitação para Treinamentos ao Ar Livre
+                  pela <em>Outward Bound Brasil</em>.
+                </p>
+                <p>
+                  Experiência em Têxtil Renner Vicunha (RS), Perdigão Agroindustrial (SC), Telet
+                  (RS), Amazônia Celular (PA) e CREA (PA). Diretora de Educação da ABRH-PA.
                 </p>
               </div>
-              <div className="rounded-xl border border-border bg-card p-6">
-                <p className="text-xs font-semibold uppercase tracking-widest text-brand">Visão</p>
-                <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                  Consolidar a ÍMPAR como referência nacional no desenvolvimento de líderes,
-                  profissionais e empreendedores de RH, combinando experiência prática, formação
-                  estratégica e soluções digitais customizadas e aplicadas às organizações.
+            </article>
+
+            <article className="rounded-2xl border border-border bg-card p-6 lg:col-span-2">
+              <div className="flex items-center gap-4">
+                <img
+                  src={fotoLuiz}
+                  alt="Luiz Cláudio Martins"
+                  className="h-16 w-16 rounded-full object-cover"
+                />
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-primary">
+                    Luiz Cláudio Martins
+                  </h3>
+                  <p className="text-sm text-brand">Diretor Financeiro e Administrativo</p>
+                </div>
+              </div>
+              <div className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
+                <p>
+                  Mentor de Homens, Analista de Engenharia de Equipes de Perfil e{" "}
+                  <em>Master</em> Analista de Perfil Comportamental <em>DISC</em>,{" "}
+                  <em>Coach</em> Bilíngue, instrutor de cursos e palestras em Desenvolvimento de
+                  Pessoas.
+                </p>
+                <p>
+                  Certificado como instrutor de <em>Outdoor Training</em> pela{" "}
+                  <em>Outward Bound Brasil</em> para condução de atividades vivenciais ao ar
+                  livre, com certificação em Primeiros Socorros e Cuidados Médicos.
+                </p>
+                <p>
+                  Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
+                  Professor de Língua Inglesa, com quatro anos de experiência no mercado de
+                  ações em Londres. Membro da Câmara Setorial de Consultores e Gestão de Pessoas
+                  na Associação Comercial do Pará.
                 </p>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -417,40 +501,6 @@ function Index() {
           </div>
         </div>
       </section>
-
-      {/* Carrossel de clientes */}
-      <section className="border-t border-border/60">
-        <div className="mx-auto max-w-6xl px-6 py-20">
-          <div className="text-center">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">Clientes</p>
-            <h2 className="mt-3 font-display text-2xl font-semibold text-primary md:text-3xl">
-              Empresas que confiam na ÍMPAR
-            </h2>
-          </div>
-        </div>
-        <div className="relative overflow-hidden pb-16">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-gradient-to-r from-background to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-background to-transparent" />
-          <div className="flex w-max animate-marquee items-center gap-16 px-8">
-            {[...clientLogos, ...clientLogos].map((logo, i) => (
-              <div
-                key={i}
-                className="flex h-24 min-w-[180px] items-center justify-center px-6"
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.name}
-                  className={`w-auto object-contain opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 ${
-                    logo.name === "Hydro" ? "max-h-28 scale-[1.6]" : "max-h-20"
-                  }`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
 
       {/* Para quem */}
       <section id="para-quem" className="border-t border-border/60 bg-surface">
@@ -535,96 +585,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Saiba Mais - Bios */}
-      <section id="saiba-mais" className="border-t border-border/60 bg-surface">
-        <div className="mx-auto max-w-6xl px-6 py-24">
-          <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">Saiba mais</p>
-            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              Quem lidera a ÍMPAR.
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Duas trajetórias complementares que sustentam a nossa forma de fazer consultoria.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-10 md:grid-cols-2">
-            <article className="rounded-2xl border border-border bg-card p-8">
-              <div className="flex items-center gap-5">
-                <img
-                  src={fotoSuzi}
-                  alt="Suzi Souza"
-                  className="h-20 w-20 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
-                  <p className="text-sm text-brand">Proprietária e Diretora Técnica</p>
-                </div>
-              </div>
-              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
-                <p>
-                  Psicóloga Organizacional, Mestre em Recursos Humanos e Gestão do Conhecimento,
-                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS.
-                  Proprietária da ÍMPAR Desenvolvimento de Pessoas, com mais de 30 anos de atuação
-                  em Recursos Humanos em empresas de grande e médio portes.
-                </p>
-                <p>
-                  Atua como Docente de Pós-Graduação (MBA) no Centro Universitário UNIFTEC,{" "}
-                  <em>Executive Coach</em>, Mentora de Profissionais de RH, <em>Coach</em> de
-                  Líderes, instrutora de cursos e palestras na área comportamental, formação de
-                  gestores e desenvolvimento de equipes.
-                </p>
-                <p>
-                  <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
-                  O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
-                  Excelência em <em>Coaching</em>. Com capacitação para Treinamentos ao Ar Livre
-                  pela <em>Outward Bound Brasil</em>.
-                </p>
-                <p>
-                  Experiência em Têxtil Renner Vicunha (RS), Perdigão Agroindustrial (SC), Telet
-                  (RS), Amazônia Celular (PA) e CREA (PA). Diretora de Educação da ABRH-PA.
-                </p>
-              </div>
-            </article>
-
-            <article className="rounded-2xl border border-border bg-card p-8">
-              <div className="flex items-center gap-5">
-                <img
-                  src={fotoLuiz}
-                  alt="Luiz Cláudio Martins"
-                  className="h-20 w-20 rounded-full object-cover"
-                />
-                <div>
-                  <h3 className="font-display text-2xl font-semibold text-primary">
-                    Luiz Cláudio Martins
-                  </h3>
-                  <p className="text-sm text-brand">Diretor de Negócios</p>
-                </div>
-              </div>
-              <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
-                <p>
-                  <em>Coach</em> Bilíngue, <em>Master</em> Analista de Perfil Comportamental{" "}
-                  <em>DiSC</em> e Analista de Engenharia de Equipes. Instrutor de treinamento e
-                  Mentor em Desenvolvimento de Pessoas.
-                </p>
-                <p>
-                  <em>Outdoor Training Instructor</em> pela <em>Outward Bound Brasil</em> para
-                  condução de atividades Vivenciais ao Ar Livre e processamento de dinâmicas
-                  (CAV), com certificação em Primeiros Socorros e Cuidados Médicos.
-                </p>
-                <p>
-                  Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
-                  Professor de Língua Inglesa, com quatro anos de experiência no mercado de ações
-                  em Londres. Atualmente Líder do Núcleo Setorial de Gestão Organizacional na
-                  Associação Comercial do Pará.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-
       {/* Footer / Contato */}
       <footer id="contato" className="border-t border-border/60 bg-primary text-primary-foreground">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-3">
@@ -680,6 +640,7 @@ function Index() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
               <li><a href="#quem-somos" className="hover:text-brand-soft">Quem somos</a></li>
+              <li><a href="#quem-lidera" className="hover:text-brand-soft">Quem lidera</a></li>
               <li><a href="#servicos" className="hover:text-brand-soft">O que fazemos</a></li>
               <li><a href="#para-quem" className="hover:text-brand-soft">Para quem</a></li>
               <li><a href="#diferenciais" className="hover:text-brand-soft">Por que ÍMPAR</a></li>
