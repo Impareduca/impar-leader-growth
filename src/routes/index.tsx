@@ -224,7 +224,7 @@ function Index() {
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#quem-somos" className="hover:text-foreground">Quem somos</a>
-            <a href="#quem-lidera" className="hover:text-foreground">Quem lidera</a>
+            <a href="#quem-transforma" className="hover:text-foreground">Quem Transforma</a>
             <a href="#servicos" className="hover:text-foreground">O que fazemos</a>
             <a href="#para-quem" className="hover:text-foreground">Para quem</a>
             <a href="#diferenciais" className="hover:text-foreground">Por que ÍMPAR</a>
@@ -349,11 +349,11 @@ function Index() {
         </div>
       </section>
 
-      {/* Quem lidera - bios reais, Suzi em destaque */}
-      <section id="quem-lidera" className="border-t border-border/60">
+      {/* Quem Transforma - bios reais, Suzi em destaque */}
+      <section id="quem-transforma" className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">Quem lidera</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Quem Transforma</p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
               Duas trajetórias complementares.
             </h2>
@@ -369,7 +369,7 @@ function Index() {
                 />
                 <div>
                   <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
-                  <p className="text-sm text-brand">Proprietária e Diretora Técnica e Comercial</p>
+                  <p className="text-sm text-brand">Fundadora e Diretora Técnica</p>
                 </div>
               </div>
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
@@ -640,7 +640,7 @@ function Index() {
             </p>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
               <li><a href="#quem-somos" className="hover:text-brand-soft">Quem somos</a></li>
-              <li><a href="#quem-lidera" className="hover:text-brand-soft">Quem lidera</a></li>
+              <li><a href="#quem-transforma" className="hover:text-brand-soft">Quem Transforma</a></li>
               <li><a href="#servicos" className="hover:text-brand-soft">O que fazemos</a></li>
               <li><a href="#para-quem" className="hover:text-brand-soft">Para quem</a></li>
               <li><a href="#diferenciais" className="hover:text-brand-soft">Por que ÍMPAR</a></li>
