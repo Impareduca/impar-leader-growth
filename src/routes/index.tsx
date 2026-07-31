@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { LeadModal } from "@/components/LeadModal";
-import heroAsset from "@/assets/hero.jpg.asset.json";
 import suziAsset from "@/assets/suzi.jpg.asset.json";
 import luizAsset from "@/assets/luiz.jpg.asset.json";
 import albrasAsset from "@/assets/clients/albras.jpg.asset.json";
@@ -43,7 +42,6 @@ const fotoSuzi = suziAsset.url;
 
 const fotoLuiz = luizAsset.url;
 
-const imagemHero = heroAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -71,22 +69,30 @@ const platforms = [
   {
     icon: Users,
     title: <em>IMPARPERFIL</em>,
-    desc: "Plataforma de avaliação comportamental proprietária, com relatórios executivos e trilhas de desenvolvimento personalizadas.",
+    desc: (
+      <>
+        Plataforma de avaliação de perfil comportamental baseada na metodologia <em>DISC</em>{" "}
+        (Dominância, Influência, Estabilidade e Análise), entre outros <em>assessments</em>,
+        aplicada individualmente. A leitura dos perfis é a base para o autoconhecimento e para
+        entender a conexão entre estilos de liderança e comunicação na equipe.
+      </>
+    ),
   },
   {
     icon: GraduationCap,
     title: <em>IMPAREDUCA</em>,
     desc: (
       <>
-        Plataforma <em>white label</em> de consultoria e educação a distância, com trilhas
-        customizadas para cada organização.
+        Plataforma <em>SaaS</em> de conteúdo para ensino em formato <em>online</em>: materiais
+        complementares digitais e aulas gravadas, com consulta disponível 24 horas por dia, 7
+        dias por semana, durante 1 ano, na opção assíncrona.
       </>
     ),
   },
   {
     icon: Cpu,
     title: <em>IMPARGESTOR</em>,
-    desc: "Plataforma com IA para gestão de pessoas: metas, avaliações, PDIs e indicadores num único lugar.",
+    desc: "Plataforma de gestão potencializada por Inteligência Artificial, que integra os diversos departamentos da empresa para ampliar a capacidade de gestão, transformando informações em decisões e decisões em resultados.",
   },
 ];
 
@@ -223,11 +229,11 @@ function Index() {
             <img src={logoImpar} alt="ÍMPAR" className="h-8 w-auto" />
           </a>
           <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
-            <a href="#quem-somos" className="hover:text-foreground">Quem somos</a>
+            <a href="#quem-somos" className="hover:text-foreground">Mais sobre nós</a>
             <a href="#quem-transforma" className="hover:text-foreground">Quem Transforma</a>
             <a href="#servicos" className="hover:text-foreground">O que fazemos</a>
-            <a href="#para-quem" className="hover:text-foreground">Para quem</a>
-            <a href="#diferenciais" className="hover:text-foreground">Por que ÍMPAR</a>
+            <a href="#para-quem" className="hover:text-foreground">Quem transformamos</a>
+            <a href="#diferenciais" className="hover:text-foreground">Por que a ÍMPAR?</a>
             <a href="#contato" className="hover:text-foreground">Contato</a>
           </nav>
           <button
@@ -245,14 +251,11 @@ function Index() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-brand-soft/60 via-background to-background" />
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-28">
           <div>
-            <span className="inline-flex items-center rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-              Desde 2002
-            </span>
-            <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.05] text-primary md:text-6xl">
-              23 anos desenvolvendo pessoas. Agora, escalando com tecnologia.
+            <h1 className="font-display text-4xl font-semibold leading-[1.05] text-primary md:text-6xl">
+              Desde 2002 desenvolvendo pessoas com novas tendências e tecnologia.
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              A ÍMPAR é uma consultoria premium de desenvolvimento humano. Servimos médias e
+              A ÍMPAR é uma consultoria premium de desenvolvimento humano. Atendemos médias e
               grandes empresas, profissionais de RH e líderes que buscam transformação real.
               Combinamos diagnóstico, desenvolvimento e gestão em um ecossistema integrado.
             </p>
@@ -275,14 +278,21 @@ function Index() {
           </div>
 
           <div className="relative">
-            <img
-              src={imagemHero}
-              alt="ÍMPAR"
-              className="aspect-[4/5] w-full rounded-2xl border border-border object-cover shadow-2xl"
-            />
-            <div className="absolute -bottom-6 -left-6 hidden rounded-xl border border-border bg-card p-4 shadow-lg md:block">
-              <p className="font-display text-3xl font-semibold text-brand">23</p>
-              <p className="text-xs uppercase tracking-wider text-muted-foreground">anos de estrada</p>
+            <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-6 rounded-2xl border border-border bg-gradient-to-br from-brand/15 via-card to-brand-soft/40 p-10 text-center shadow-2xl">
+              <img src={logoImpar} alt="ÍMPAR" className="h-20 w-20 rounded-full object-cover shadow-lg" />
+              <p className="font-display text-4xl font-semibold tracking-wide text-primary md:text-5xl">
+                ÍMPAR
+              </p>
+              <p className="max-w-[220px] text-sm uppercase tracking-widest text-muted-foreground">
+                Desenvolvimento de Pessoas
+              </p>
+            </div>
+            <div className="absolute -bottom-6 -left-6 hidden items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-lg md:flex">
+              <img src={logoImpar} alt="ÍMPAR" className="h-9 w-9 rounded-full object-cover" />
+              <div>
+                <p className="font-display text-3xl font-semibold leading-none text-brand">23</p>
+                <p className="text-xs uppercase tracking-wider text-muted-foreground">anos de estrada</p>
+              </div>
             </div>
           </div>
         </div>
@@ -292,7 +302,7 @@ function Index() {
       <section className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 pt-12">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-            Empresas que confiam na ÍMPAR
+            Empresas que contratam a ÍMPAR
           </p>
         </div>
         <div className="relative overflow-hidden py-10">
@@ -321,9 +331,9 @@ function Index() {
       {/* Quem somos - institucional, enxuto */}
       <section id="quem-somos" className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
-          <p className="text-sm font-medium uppercase tracking-widest text-brand">Quem somos</p>
+          <p className="text-sm font-medium uppercase tracking-widest text-brand">Mais sobre nós</p>
           <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-            Método, presença e tecnologia a serviço de quem forma pessoas.
+            Método, presença e tecnologia a serviço de quem transforma pessoas.
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground/85">
             Combinamos metodologias comprovadas com inovação tecnológica e toque humano,
@@ -335,14 +345,18 @@ function Index() {
             <div className="rounded-xl border border-border bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand">Missão</p>
               <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                Desenvolver pessoas para que organizações prosperem com consciência e resultado.
+                Promover melhorias transformadoras, profundas e duradouras nas organizações,
+                desenvolvendo empreendedores e profissionais, e facilitando para que líderes e
+                equipes alcancem seu potencial por meio de soluções digitais personalizadas em
+                desenvolvimento humano e gestão.
               </p>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand">Visão</p>
               <p className="mt-2 text-sm leading-relaxed text-foreground/85">
                 Consolidar a ÍMPAR como referência nacional no desenvolvimento de líderes,
-                profissionais e empreendedores de RH.
+                profissionais e empreendedores de RH, combinando experiência prática, formação
+                estratégica e soluções digitais customizadas de gestão aplicadas às organizações.
               </p>
             </div>
           </div>
@@ -442,13 +456,14 @@ function Index() {
       <section id="servicos" className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
-            <p className="text-sm font-medium uppercase tracking-widest text-brand">Soluções</p>
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Soluções e Recursos</p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              Plataformas proprietárias e serviços de consultoria.
+              Sempre um passo à frente, na fronteira entre pessoas e tecnologia.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              Do diagnóstico comportamental à formação de novos consultores, da vivência
-              presencial à tecnologia proprietária. Um ecossistema completo de soluções.
+              Do diagnóstico comportamental à transformação do Líder Alfa, da experiência
+              analógica à presença digital. Um ecossistema completo de soluções adaptáveis e
+              customizáveis.
             </p>
           </div>
 
@@ -639,11 +654,11 @@ function Index() {
               Navegação
             </p>
             <ul className="mt-4 space-y-2 text-sm text-primary-foreground/80">
-              <li><a href="#quem-somos" className="hover:text-brand-soft">Quem somos</a></li>
+              <li><a href="#quem-somos" className="hover:text-brand-soft">Mais sobre nós</a></li>
               <li><a href="#quem-transforma" className="hover:text-brand-soft">Quem Transforma</a></li>
               <li><a href="#servicos" className="hover:text-brand-soft">O que fazemos</a></li>
-              <li><a href="#para-quem" className="hover:text-brand-soft">Para quem</a></li>
-              <li><a href="#diferenciais" className="hover:text-brand-soft">Por que ÍMPAR</a></li>
+              <li><a href="#para-quem" className="hover:text-brand-soft">Quem transformamos</a></li>
+              <li><a href="#diferenciais" className="hover:text-brand-soft">Por que a ÍMPAR?</a></li>
             </ul>
           </div>
         </div>
