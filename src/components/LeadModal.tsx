@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
 type Props = {
@@ -12,6 +12,9 @@ const IFRAME_URL =
   "https://cvanwvoddchatcdstwry.supabase.co/functions/v1/crm-webform-embed?id=a3213154-9f28-4ad3-8d80-c30f64768b44";
 
 export function LeadModal({ open, onClose }: Props) {
+  const [formHtml, setFormHtml] = useState<string | null>(null);
+  const [fetchFailed, setFetchFailed] = useState(false);
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -23,6 +26,21 @@ export function LeadModal({ open, onClose }: Props) {
       document.body.style.overflow = prev;
     };
   }, [open, onClose]);
+
+  useEffect(() => {
+    if (!open || formHtml || fetchFailed) return;
+    // O backend (Supabase Edge Function) às vezes responde sem o header
+    // Content-Type: text/html, o que faz o navegador exibir o código-fonte
+    // em vez de renderizar o formulário. Buscamos o conteúdo manualmente e
+    // injetamos via srcDoc, que ignora esse header e sempre renderiza como HTML.
+    fetch(IFRAME_URL)
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar formulário");
+        return res.text();
+      })
+      .then((html) => setFormHtml(html))
+      .catch(() => setFetchFailed(true));
+  }, [open, formHtml, fetchFailed]);
 
   if (!open) return null;
 
@@ -62,15 +80,26 @@ export function LeadModal({ open, onClose }: Props) {
         </div>
 
         <div className="flex-1 overflow-y-auto px-2 pb-4 sm:px-4">
-          <iframe
-            src={IFRAME_URL}
-            title="Formulário de contato ÍMPAR"
-            width="100%"
-            height="450"
-            frameBorder="0"
-            className="w-full border-0"
-            style={{ border: "none", maxWidth: "500px", margin: "0 auto", display: "block" }}
-          />
+          {formHtml ? (
+            <iframe
+              srcDoc={formHtml}
+              title="Formulário de contato ÍMPAR"
+              width="100%"
+              height="450"
+              className="w-full border-0"
+              style={{ border: "none", maxWidth: "500px", margin: "0 auto", display: "block" }}
+            />
+          ) : (
+            <iframe
+              src={IFRAME_URL}
+              title="Formulário de contato ÍMPAR"
+              width="100%"
+              height="450"
+              frameBorder="0"
+              className="w-full border-0"
+              style={{ border: "none", maxWidth: "500px", margin: "0 auto", display: "block" }}
+            />
+          )}
         </div>
       </div>
     </div>

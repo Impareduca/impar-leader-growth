@@ -257,8 +257,8 @@ function Index() {
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               A ÍMPAR é uma consultoria premium de desenvolvimento humano. Atendemos médias e
-              grandes empresas, profissionais de RH e líderes que buscam transformação real.
-              Combinamos diagnóstico, desenvolvimento e gestão em um ecossistema integrado.
+              grandes empresas, líderes, equipes e profissionais de RH que buscam transformação
+              real. Combinamos diagnóstico, desenvolvimento e gestão em um ecossistema integrado.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <button
@@ -279,21 +279,13 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-6 rounded-2xl border border-border bg-gradient-to-br from-brand/15 via-card to-brand-soft/40 p-10 text-center shadow-2xl">
-              <img src={logoImpar} alt="ÍMPAR" className="h-20 w-auto object-contain drop-shadow-lg" />
-              <p className="font-display text-4xl font-semibold tracking-wide text-primary md:text-5xl">
-                ÍMPAR
-              </p>
-              <p className="max-w-[220px] text-sm uppercase tracking-widest text-muted-foreground">
-                Desenvolvimento de Pessoas
-              </p>
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden items-center gap-3 rounded-xl border border-border bg-card p-4 shadow-lg md:flex">
-              <img src={logoImparIcone} alt="ÍMPAR" className="h-9 w-9 object-contain" />
-              <div>
-                <p className="font-display text-3xl font-semibold leading-none text-brand">23</p>
-                <p className="text-xs uppercase tracking-wider text-muted-foreground">anos de estrada</p>
-              </div>
+            <img
+              src={fotoSuzi}
+              alt="Suzi Souza - ÍMPAR Desenvolvimento de Pessoas"
+              className="aspect-[4/5] w-full rounded-2xl border border-border object-cover shadow-2xl"
+            />
+            <div className="absolute -bottom-6 -left-6 hidden rounded-full border border-border bg-card p-3 shadow-lg md:block">
+              <img src={logoImparIcone} alt="ÍMPAR" className="h-12 w-12 object-contain" />
             </div>
           </div>
         </div>
