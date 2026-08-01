@@ -9,7 +9,6 @@ import hydroAsset from "@/assets/clients/hydro.png.asset.json";
 import wurthAsset from "@/assets/clients/wurth.jpg.asset.json";
 import aqualandAsset from "@/assets/clients/aqualand.png.asset.json";
 import supergiroAsset from "@/assets/clients/supergiro.png.asset.json";
-import rioazulAsset from "@/assets/clients/rioazul.png.asset.json";
 import consagAsset from "@/assets/clients/consag.png.asset.json";
 import {
   ArrowRight,
@@ -161,7 +160,6 @@ const clientLogos = [
   { name: "Würth", src: wurthAsset.url },
   { name: "Aqualand", src: aqualandAsset.url },
   { name: "Supergiro", src: supergiroAsset.url },
-  { name: "Rio Azul", src: rioazulAsset.url },
   { name: "Consag", src: consagAsset.url },
 ];
 
@@ -330,8 +328,8 @@ function Index() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground/85">
             Combinamos metodologias comprovadas com inovação tecnológica e toque humano,
-            atuando em todo o território nacional com soluções <em>online</em> e presença
-            regular nos estados do Norte e Nordeste.
+            atuando em todo o território nacional com soluções <em>online</em> e presencial,
+            atuando regularmente no Norte e Nordeste.
           </p>
 
           <div className="mx-auto mt-10 grid max-w-2xl gap-4 text-left sm:grid-cols-2">
@@ -339,17 +337,18 @@ function Index() {
               <p className="text-xs font-semibold uppercase tracking-widest text-brand">Missão</p>
               <p className="mt-2 text-sm leading-relaxed text-foreground/85">
                 Promover melhorias transformadoras, profundas e duradouras nas organizações,
-                desenvolvendo empreendedores e profissionais, e facilitando para que líderes e
-                equipes alcancem seu potencial por meio de soluções digitais personalizadas em
-                desenvolvimento humano e gestão.
+                desenvolvendo profissionais, colaboradores e empreendedores, facilitando para
+                que líderes e equipes alavanquem seus resultados por meio de soluções digitais
+                personalizadas em desenvolvimento humano e gestão.
               </p>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand">Visão</p>
               <p className="mt-2 text-sm leading-relaxed text-foreground/85">
                 Consolidar a ÍMPAR como referência nacional no desenvolvimento de líderes,
-                profissionais e empreendedores de RH, combinando experiência prática, formação
-                estratégica e soluções digitais customizadas de gestão aplicadas às organizações.
+                equipes, empreendedores e profissionais de RH, combinando estratégia de mercado,
+                experiência prática e acadêmica, com soluções digitais customizadas de gestão
+                aplicadas às organizações.
               </p>
             </div>
           </div>
