@@ -338,7 +338,6 @@ function Index() {
                       ? "max-h-24 scale-[1.35]"
                       : "max-h-20"
                   }`}
-                  loading="lazy"
                 />
               </div>
             ))}
@@ -370,13 +369,14 @@ function Index() {
               </p>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-brand">Visão</p>
-              <p className="mt-2 text-sm leading-relaxed text-foreground/85">
-                Consolidar a ÍMPAR como referência nacional no desenvolvimento de líderes,
-                equipes, empreendedores e profissionais de RH, combinando estratégia de mercado,
-                experiência prática e acadêmica, com soluções digitais customizadas de gestão
-                aplicadas às organizações.
-              </p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-brand">Valores</p>
+              <ul className="mt-2 space-y-1 text-sm leading-snug text-foreground/85">
+                <li><strong className="font-semibold">Valorização das Pessoas</strong></li>
+                <li><strong className="font-semibold">Integridade</strong></li>
+                <li><strong className="font-semibold">Transformação com Propósito</strong></li>
+                <li><strong className="font-semibold">Inovação Consistente</strong></li>
+                <li><strong className="font-semibold">Impacto Positivo</strong></li>
+              </ul>
             </div>
           </div>
         </div>
