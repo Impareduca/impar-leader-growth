@@ -43,6 +43,7 @@ import {
   Building2,
   Briefcase,
   UserCheck,
+  Quote,
 } from "lucide-react";
 
 // Imagens
@@ -234,6 +235,38 @@ const differentials = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: (
+      <>
+        O maior ganho que essa jornada me proporcionou foi o meu desenvolvimento como líder.
+        Aprendi a me comunicar de forma mais assertiva, a ouvir minha equipe com mais atenção,
+        a conduzir <em>feedbacks</em> e conversas difíceis com confiança e a compreender
+        melhor os diferentes perfis comportamentais por meio do <em>DISC</em>. Além do
+        crescimento profissional, também evoluí no aspecto pessoal, desenvolvendo mais
+        inteligência emocional, empatia e segurança para tomar decisões. São aprendizados
+        que levarei para toda a vida e que contribuirão para o desenvolvimento contínuo da
+        minha equipe de <em>merchandising</em> e para melhores resultados.
+      </>
+    ),
+    name: "Felipe dos Santos Barata",
+    role: "Supergiro",
+  },
+  {
+    quote: (
+      <>
+        Obtive clareza de quem estava comigo, aprendi a conhecer melhor meu vendedor e a
+        trabalhar os conflitos e dificuldades dele na sua jornada de trabalho. Muitas das
+        vezes é só você estimular da forma correta que muita coisa já muda no comportamento.
+        Ganhei métodos para aplicar diariamente; melhorou minha gestão e, o mais importante,
+        consegui executar isso no meu dia a dia para melhorar minha gestão de pessoas.
+      </>
+    ),
+    name: "Dhemson Sousa e Silva",
+    role: null as string | null,
+  },
+];
+
 function Index() {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => setModalOpen(true);
@@ -252,6 +285,7 @@ function Index() {
             <a href="#servicos" className="hover:text-foreground">O que fazemos</a>
             <a href="#para-quem" className="hover:text-foreground">Quem transformamos</a>
             <a href="#diferenciais" className="hover:text-foreground">Por que a ÍMPAR?</a>
+            <a href="#depoimentos" className="hover:text-foreground">Depoimentos</a>
             <a href="#contato" className="hover:text-foreground">Contato</a>
           </nav>
           <button
@@ -436,10 +470,10 @@ function Index() {
                 <p>
                   <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
                   O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
-                  Excelência em <em>Coaching</em>, certificação como instrutora de{" "}
-                  <em>Outdoor Training</em> pela <em>Outward Bound Brasil</em> para a condução de
-                  atividades vivenciais ao ar livre e processamento de dinâmicas (CAV), é
-                  Diretora de Educação da ABRH-PA.
+                  Excelência em <em>Coaching</em>, certificação como instrutora vivencial pela{" "}
+                  <em>Outward Bound Brasil</em> em atividades de <em>Outdoor</em> e{" "}
+                  <em>Indoor Training</em> com processamento de dinâmicas (CAV), é Diretora de
+                  Educação da ABRH-PA.
                 </p>
               </div>
             </article>
@@ -482,19 +516,19 @@ function Index() {
                 <p>
                   Diretor Financeiro e Administrativo da ÍMPAR, Analista de Engenharia de
                   Equipes e de Perfil Comportamental <em>DISC</em>, <em>Coach</em> Bilíngue,
-                  Mentor de Homens, Instrutor e Palestrante em Desenvolvimento de Pessoas.
+                  Mentor de Homens, Palestrante e Instrutor na área comportamental. Membro da
+                  Câmara Setorial de Consultores e Gestão de Pessoas na Associação Comercial do
+                  Pará.
                 </p>
                 <p>
-                  Certificado como instrutor de <em>Outdoor Training</em> pela{" "}
-                  <em>Outward Bound Brasil</em> para a condução de atividades vivenciais ao ar
-                  livre e processamento de dinâmicas (CAV), com certificação em Primeiros
-                  Socorros e Cuidados Médicos.
+                  Certificação como instrutor vivencial pela <em>Outward Bound Brasil</em> em
+                  atividades de <em>Outdoor</em> e <em>Indoor Training</em> com processamento de
+                  dinâmicas (CAV), certificado em Primeiros Socorros e Cuidados Médicos.
                 </p>
                 <p>
                   Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
-                  Professor de Língua Inglesa, com quatro anos de experiência no mercado de
-                  ações em Londres. Membro da Câmara Setorial de Consultores e Gestão de Pessoas
-                  na Associação Comercial do Pará.
+                  proficiência profissional no ensino da língua inglesa, com quatro anos de
+                  atuação no mercado de ações em Londres; fala italiano.
                 </p>
               </div>
             </article>
@@ -652,6 +686,31 @@ function Index() {
         </div>
       </section>
 
+      {/* Depoimentos */}
+      <section id="depoimentos" className="border-t border-border/60 bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-24">
+          <div className="max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-widest text-brand">Depoimentos</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
+              Resultados que falam por quem viveu a transformação.
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {testimonials.map(({ quote, name, role }, i) => (
+              <article key={i} className="rounded-2xl border border-border bg-card p-7">
+                <Quote className="h-6 w-6 text-brand" />
+                <p className="mt-4 text-sm leading-relaxed text-foreground/85">{quote}</p>
+                <div className="mt-5">
+                  <p className="text-sm font-semibold text-primary">{name}</p>
+                  {role && <p className="text-xs text-muted-foreground">{role}</p>}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
@@ -732,6 +791,7 @@ function Index() {
               <li><a href="#servicos" className="hover:text-brand-soft">O que fazemos</a></li>
               <li><a href="#para-quem" className="hover:text-brand-soft">Quem transformamos</a></li>
               <li><a href="#diferenciais" className="hover:text-brand-soft">Por que a ÍMPAR?</a></li>
+              <li><a href="#depoimentos" className="hover:text-brand-soft">Depoimentos</a></li>
             </ul>
           </div>
         </div>
