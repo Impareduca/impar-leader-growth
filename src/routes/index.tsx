@@ -12,6 +12,8 @@ import logoCdp from "@/assets/generated/logoCdp.png";
 import logoHydroNovo from "@/assets/generated/logoHydroNovo.png";
 import logoInviolavel from "@/assets/generated/logoInviolavel.png";
 import logoUnimed from "@/assets/generated/logoUnimed.png";
+import logoAbrhPa from "@/assets/generated/logoAbrhPa.png";
+import logoAcp from "@/assets/generated/logoAcp.jpg";
 import suziAsset from "@/assets/suzi.jpg.asset.json";
 import luizAsset from "@/assets/luiz.jpg.asset.json";
 import tracbelAsset from "@/assets/clients/tracbel.png.asset.json";
@@ -34,6 +36,7 @@ import {
   Mail,
   Phone,
   Linkedin,
+  Instagram,
   Activity,
   Users2,
   Award,
@@ -173,6 +176,11 @@ const clientLogos = [
   { name: "diCasa", src: logoDicasa },
   { name: "Inviolável", src: logoInviolavel },
   { name: "Unimed", src: logoUnimed },
+];
+
+const partners = [
+  { name: "ABRH-PA", src: logoAbrhPa },
+  { name: "Associação Comercial do Pará", src: logoAcp },
 ];
 
 const audiences = [
@@ -389,14 +397,35 @@ function Index() {
                 <div>
                   <h3 className="font-display text-2xl font-semibold text-primary">Suzi Souza</h3>
                   <p className="text-sm text-brand">Fundadora e Diretora Técnica</p>
+                  <div className="mt-1.5 flex items-center gap-3">
+                    <a
+                      href="https://www.linkedin.com/in/suzicns/"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="LinkedIn de Suzi Souza"
+                      className="text-muted-foreground transition hover:text-brand"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/eu.suzi.souza"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Instagram de Suzi Souza"
+                      className="text-muted-foreground transition hover:text-brand"
+                    >
+                      <Instagram className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="mt-6 space-y-4 text-sm leading-relaxed text-foreground/85">
                 <p>
                   Psicóloga Organizacional, Mestre em Recursos Humanos e Gestão do Conhecimento,
-                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS.
-                  Proprietária da ÍMPAR Desenvolvimento de Pessoas, com mais de 30 anos de atuação
-                  em Recursos Humanos em empresas de grande e médio portes.
+                  pós-graduada em Administração de <em>Marketing</em> pela UNISINOS-RS. Fundadora
+                  da ÍMPAR Desenvolvimento de Pessoas, desde 1991 atuou no RH de empresas de
+                  grande e médio portes, como Têxtil Renner Vicunha (RS), Perdigão Agroindustrial
+                  (SC), Telet (RS), Amazônia Celular (PA) e CREA (PA).
                 </p>
                 <p>
                   Atua como Docente de Pós-Graduação (MBA) no Centro Universitário UNIFTEC,{" "}
@@ -407,12 +436,10 @@ function Index() {
                 <p>
                   <em>Trainer DISC IMPARPERFIL</em>, <em>Adviser STARTRUST</em>, Analista Corporal
                   O Corpo Explica, Mentora e <em>Coach</em> de Excelência pelo Instituto
-                  Excelência em <em>Coaching</em>. Com capacitação para Treinamentos ao Ar Livre
-                  pela <em>Outward Bound Brasil</em>.
-                </p>
-                <p>
-                  Experiência em Têxtil Renner Vicunha (RS), Perdigão Agroindustrial (SC), Telet
-                  (RS), Amazônia Celular (PA) e CREA (PA). Diretora de Educação da ABRH-PA.
+                  Excelência em <em>Coaching</em>, certificação como instrutora de{" "}
+                  <em>Outdoor Training</em> pela <em>Outward Bound Brasil</em> para a condução de
+                  atividades vivenciais ao ar livre e processamento de dinâmicas (CAV), é
+                  Diretora de Educação da ABRH-PA.
                 </p>
               </div>
             </article>
@@ -422,26 +449,46 @@ function Index() {
                 <img
                   src={fotoLuiz}
                   alt="Luiz Cláudio Martins"
-                  className="h-16 w-16 rounded-full object-cover"
+                  className="h-24 w-24 rounded-full object-cover"
                 />
                 <div>
                   <h3 className="font-display text-xl font-semibold text-primary">
                     Luiz Cláudio Martins
                   </h3>
                   <p className="text-sm text-brand">Diretor Financeiro e Administrativo</p>
+                  <div className="mt-1.5 flex items-center gap-3">
+                    <a
+                      href="https://www.linkedin.com/in/luiz-claudio-martins/"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="LinkedIn de Luiz Cláudio Martins"
+                      className="text-muted-foreground transition hover:text-brand"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/smartluiz/"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label="Instagram de Luiz Cláudio Martins"
+                      className="text-muted-foreground transition hover:text-brand"
+                    >
+                      <Instagram className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="mt-5 space-y-3 text-sm leading-relaxed text-foreground/85">
                 <p>
-                  Mentor de Homens, Analista de Engenharia de Equipes de Perfil e{" "}
-                  <em>Master</em> Analista de Perfil Comportamental <em>DISC</em>,{" "}
-                  <em>Coach</em> Bilíngue, instrutor de cursos e palestras em Desenvolvimento de
-                  Pessoas.
+                  Diretor Financeiro e Administrativo da ÍMPAR, Analista de Engenharia de
+                  Equipes e de Perfil Comportamental <em>DISC</em>, <em>Coach</em> Bilíngue,
+                  Mentor de Homens, Instrutor e Palestrante em Desenvolvimento de Pessoas.
                 </p>
                 <p>
                   Certificado como instrutor de <em>Outdoor Training</em> pela{" "}
-                  <em>Outward Bound Brasil</em> para condução de atividades vivenciais ao ar
-                  livre, com certificação em Primeiros Socorros e Cuidados Médicos.
+                  <em>Outward Bound Brasil</em> para a condução de atividades vivenciais ao ar
+                  livre e processamento de dinâmicas (CAV), com certificação em Primeiros
+                  Socorros e Cuidados Médicos.
                 </p>
                 <p>
                   Oficial de Marinha pós-graduado, Gestor no segmento <em>Off-Shore</em>,
@@ -451,6 +498,29 @@ function Index() {
                 </p>
               </div>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Parceiros institucionais */}
+      <section className="border-t border-border/60 bg-surface">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Instituições parceiras
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="flex h-28 w-52 items-center justify-center rounded-2xl border border-border bg-card p-5"
+              >
+                <img
+                  src={partner.src}
+                  alt={partner.name}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
