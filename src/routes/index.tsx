@@ -83,8 +83,9 @@ const platforms = [
     title: <em>IMPAREDUCA</em>,
     desc: (
       <>
-        Plataforma de conteúdo para ensino <em>online</em> assíncrono de Consultorias,
-        Mentorias e Cursos, com acesso 24 por 07.
+        Plataforma de conteúdo para ensino <em>online</em> de Consultorias, Mentorias e Cursos,
+        com acesso 24 por 07, que conduz o consumidor do conteúdo por uma metodologia
+        estruturada, com o especialista presente de forma síncrona ou assíncrona.
       </>
     ),
   },
