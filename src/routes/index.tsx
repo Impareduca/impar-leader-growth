@@ -370,12 +370,12 @@ function Index() {
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand">Valores</p>
-              <ul className="mt-2 space-y-1 text-sm leading-snug text-foreground/85">
-                <li><strong className="font-semibold">Valorização das Pessoas</strong></li>
-                <li><strong className="font-semibold">Integridade</strong></li>
-                <li><strong className="font-semibold">Transformação com Propósito</strong></li>
-                <li><strong className="font-semibold">Inovação Consistente</strong></li>
-                <li><strong className="font-semibold">Impacto Positivo</strong></li>
+              <ul className="mt-2 space-y-1.5 text-sm leading-snug text-foreground/85">
+                <li><strong className="font-semibold">Valorização das Pessoas:</strong> fortalecer relações</li>
+                <li><strong className="font-semibold">Integridade:</strong> coerência, transparência</li>
+                <li><strong className="font-semibold">Transformação com Propósito:</strong> mudanças reais</li>
+                <li><strong className="font-semibold">Inovação Consistente:</strong> novas tecnologias e métodos</li>
+                <li><strong className="font-semibold">Impacto Positivo:</strong> resultados duradouros</li>
               </ul>
             </div>
           </div>
