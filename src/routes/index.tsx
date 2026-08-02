@@ -85,7 +85,7 @@ const platforms = [
       <>
         Plataforma de conteúdo para ensino <em>online</em> de Consultorias, Mentorias e Cursos,
         com acesso 24 por 07, que conduz o consumidor do conteúdo por uma metodologia
-        estruturada, com o especialista presente de forma síncrona ou assíncrona.
+        estruturada, estando o especialista presente de forma síncrona ou assíncrona.
       </>
     ),
   },
