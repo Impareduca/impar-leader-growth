@@ -71,10 +71,10 @@ const platforms = [
     title: <em>IMPARPERFIL</em>,
     desc: (
       <>
-        Plataforma de avaliação de perfil comportamental baseada na metodologia <em>DISC</em>{" "}
-        (Dominância, Influência, Estabilidade e Análise), entre outros <em>assessments</em>,
-        aplicada individualmente. A leitura dos perfis é a base para o autoconhecimento e para
-        entender a conexão entre estilos de liderança e comunicação na equipe.
+        Plataforma de <em>Assessment</em>, Engenharia de Equipes e Avaliações de Perfil
+        Comportamental baseada na metodologia <em>DISC</em> (Dominância, Influência,
+        Estabilidade e Análise). A leitura dos perfis é a base para o autoconhecimento e para
+        entender a conexão entre estilos de liderança e comunicação das equipes.
       </>
     ),
   },
@@ -83,9 +83,8 @@ const platforms = [
     title: <em>IMPAREDUCA</em>,
     desc: (
       <>
-        Plataforma <em>SaaS</em> de conteúdo para ensino em formato <em>online</em>: materiais
-        complementares digitais e aulas gravadas, com consulta disponível 24 horas por dia, 7
-        dias por semana, durante 1 ano, na opção assíncrona.
+        Plataforma de conteúdo para ensino <em>online</em> assíncrono de Consultorias,
+        Mentorias e Cursos, com acesso 24 por 07.
       </>
     ),
   },
@@ -372,10 +371,10 @@ function Index() {
               <p className="text-xs font-semibold uppercase tracking-widest text-brand">Valores</p>
               <ul className="mt-2 space-y-1.5 text-sm leading-snug text-foreground/85">
                 <li><strong className="font-semibold">Valorização das Pessoas:</strong> fortalecer relações</li>
-                <li><strong className="font-semibold">Integridade:</strong> coerência, transparência</li>
+                <li><strong className="font-semibold">Integridade:</strong> coerência, transparência e responsabilidade</li>
                 <li><strong className="font-semibold">Transformação com Propósito:</strong> mudanças reais</li>
                 <li><strong className="font-semibold">Inovação Consistente:</strong> novas tecnologias e métodos</li>
-                <li><strong className="font-semibold">Impacto Positivo:</strong> resultados duradouros</li>
+                <li><strong className="font-semibold">Impacto Positivo:</strong> gerando resultados duradouros</li>
               </ul>
             </div>
           </div>
