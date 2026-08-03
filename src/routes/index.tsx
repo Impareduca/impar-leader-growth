@@ -37,6 +37,8 @@ import {
   Phone,
   Linkedin,
   Instagram,
+  Facebook,
+  MapPin,
   Activity,
   Users2,
   Award,
@@ -124,6 +126,7 @@ const services = [
     icon: UserCheck,
     title: "Coaching para Líderes",
     desc: "Programas estruturados para média e nova liderança desenvolverem presença, gestão de pessoas e resultado.",
+    href: "https://vivaderh.com.br/5/mentoria-de-lideres",
   },
   {
     icon: Compass,
@@ -134,6 +137,7 @@ const services = [
         consultoria, com o programa <em>Viva de RH</em>.
       </>
     ),
+    href: "https://vivaderh.com.br/vrh-inscricao-org-ab",
   },
   {
     icon: Users2,
@@ -273,6 +277,56 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <LeadModal open={modalOpen} onClose={() => setModalOpen(false)} />
+
+      {/* Tarjeta institucional */}
+      <div className="bg-primary text-primary-foreground/90">
+        <div className="mx-auto max-w-6xl px-6 py-2 text-center">
+          <p className="text-[11px] font-semibold uppercase tracking-widest">
+            ÍMPAR Coaching e Desenvolvimento de Pessoa LTDA
+          </p>
+          <div className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px]">
+            <span className="inline-flex items-center gap-1.5">
+              <MapPin className="h-3 w-3 shrink-0" />
+              Avenida Governador José Malcher, 153, sala 12, Nazaré, Belém/PA. CEP 66.035-065
+            </span>
+            <a
+              href="mailto:admin@impareduca.com.br"
+              className="inline-flex items-center gap-1.5 hover:text-brand-soft"
+            >
+              <Mail className="h-3 w-3" />
+              admin@impareduca.com.br
+            </a>
+            <a
+              href="https://wa.me/5591999945999"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-brand-soft"
+            >
+              <Phone className="h-3 w-3" />
+              (91) 99994-5999
+            </a>
+            <a
+              href="https://www.linkedin.com/company/impar-educação-profissional/?viewAsMember=true"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn ÍMPAR"
+              className="hover:text-brand-soft"
+            >
+              <Linkedin className="h-3.5 w-3.5" />
+            </a>
+            <a
+              href="http://facebook.com/impareduca"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook ÍMPAR"
+              className="hover:text-brand-soft"
+            >
+              <Facebook className="h-3.5 w-3.5" />
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* Nav */}
       <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -607,7 +661,7 @@ function Index() {
               </span>
             </div>
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {services.map(({ icon: Icon, title, desc }, i) => (
+              {services.map(({ icon: Icon, title, desc, href }, i) => (
                 <article
                   key={i}
                   className="group rounded-2xl border border-border bg-card p-6 transition hover:border-brand hover:shadow-lg"
@@ -617,6 +671,17 @@ function Index() {
                   </div>
                   <h4 className="mt-4 font-display text-base font-semibold text-primary">{title}</h4>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
+                  {href && (
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand hover:underline"
+                    >
+                      Saiba mais
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </article>
               ))}
             </div>
