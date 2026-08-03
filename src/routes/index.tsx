@@ -20,7 +20,7 @@ import logoAqualand from "@/assets/generated/logoAqualand.png";
 import logoSupergiro from "@/assets/generated/logoSupergiro.png";
 import logoConsag from "@/assets/generated/logoConsag.png";
 import fotoLuiz from "@/assets/generated/fotoLuiz.jpg";
-import suziAsset from "@/assets/suzi.jpg.asset.json";
+import fotoSuzi from "@/assets/generated/fotoSuzi.jpg";
 import {
   ArrowRight,
   Users,
@@ -47,10 +47,6 @@ import {
   UserCheck,
   Quote,
 } from "lucide-react";
-
-// Imagens
-
-const fotoSuzi = suziAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
