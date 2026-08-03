@@ -68,7 +68,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "23 anos desenvolvendo pessoas. Consultoria premium que une método, escuta e tecnologia proprietária.",
+          "Desde 2002 desenvolvendo pessoas. Consultoria premium que une método, escuta e tecnologia disruptiva.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -214,17 +214,17 @@ const audiences = [
 const differentials = [
   {
     icon: ShieldCheck,
-    title: "23 anos de expertise comprovada",
-    desc: "Duas décadas de prática ajustada em campo, com centenas de empresas de diferentes portes e setores.",
+    title: "Expertise comprovada",
+    desc: "Desde 2002 entregando soluções para empresas de diferentes portes e setores.",
   },
   {
     icon: Mountain,
     title: "Certificados em Outdoor Training",
-    desc: "Metodologias vivenciais conduzidas por especialistas certificados. Aprendizado que fica no corpo, não só no slide.",
+    desc: "Metodologias vivenciais conduzidas por especialistas certificados. Aprendizado duradouro que volta para a empresa.",
   },
   {
     icon: Heart,
-    title: "Toque humano e tecnologia proprietária",
+    title: "Toque humano em tecnologia disruptiva",
     desc: (
       <>
         Escuta, presença e método, potencializados pelas plataformas <em>IMPARGESTOR</em> e{" "}
@@ -235,7 +235,7 @@ const differentials = [
   {
     icon: Layers,
     title: "Diagnóstico, desenvolvimento e gestão",
-    desc: "Um ecossistema integrado: avaliar perfis, desenvolver pessoas e acompanhar resultados no mesmo fluxo.",
+    desc: "Um ecossistema integrado que avalia perfis, desenvolve pessoas e acompanha resultados no mesmo fluxo.",
   },
 ];
 
@@ -267,7 +267,7 @@ const testimonials = [
       </>
     ),
     name: "Dhemson Sousa e Silva",
-    role: null as string | null,
+    role: "Rio Azul Distribuidora" as string | null,
   },
 ];
 
@@ -289,6 +289,8 @@ function Index() {
               <MapPin className="h-3 w-3 shrink-0" />
               Avenida Governador José Malcher, 153, sala 12, Nazaré, Belém/PA. CEP 66.035-065
             </span>
+          </div>
+          <div className="mt-1 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px]">
             <a
               href="mailto:admin@impareduca.com.br"
               className="inline-flex items-center gap-1.5 hover:text-brand-soft"
@@ -305,24 +307,26 @@ function Index() {
               <Phone className="h-3 w-3" />
               (91) 99994-5999
             </a>
-            <a
-              href="https://www.linkedin.com/company/impar-educação-profissional/?viewAsMember=true"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn ÍMPAR"
-              className="hover:text-brand-soft"
-            >
-              <Linkedin className="h-3.5 w-3.5" />
-            </a>
-            <a
-              href="http://facebook.com/impareduca"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Facebook ÍMPAR"
-              className="hover:text-brand-soft"
-            >
-              <Facebook className="h-3.5 w-3.5" />
-            </a>
+            <div className="ml-4 flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/company/impar-educação-profissional/?viewAsMember=true"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn ÍMPAR"
+                className="hover:text-brand-soft"
+              >
+                <Linkedin className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="http://facebook.com/impareduca"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Facebook ÍMPAR"
+                className="hover:text-brand-soft"
+              >
+                <Facebook className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -333,7 +337,7 @@ function Index() {
           <a href="#top" className="flex items-center">
             <img src={logoImpar} alt="ÍMPAR" className="h-8 w-auto" />
           </a>
-          <nav className="hidden gap-8 text-sm text-muted-foreground md:flex">
+          <nav className="hidden gap-8 text-sm text-brand md:flex">
             <a href="#quem-somos" className="hover:text-foreground">Mais sobre nós</a>
             <a href="#quem-transforma" className="hover:text-foreground">Quem Transforma</a>
             <a href="#servicos" className="hover:text-foreground">O que fazemos</a>
@@ -376,7 +380,7 @@ function Index() {
               </button>
               <a
                 href="#servicos"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition hover:bg-secondary"
+                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition hover:opacity-90"
               >
                 Explorar soluções
               </a>
@@ -399,7 +403,7 @@ function Index() {
       {/* Carrossel de clientes - prova social logo após o hero */}
       <section className="border-t border-border/60">
         <div className="mx-auto max-w-6xl px-6 pt-12">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+          <p className="text-center text-xs font-semibold tracking-widest text-brand">
             Empresas que contratam a ÍMPAR
           </p>
         </div>
@@ -593,7 +597,7 @@ function Index() {
       {/* Parceiros institucionais */}
       <section className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+          <p className="text-center text-xs font-semibold tracking-widest text-brand">
             Instituições parceiras
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
@@ -632,7 +636,7 @@ function Index() {
           <div className="mt-14">
             <div className="flex items-baseline justify-between">
               <h3 className="font-display text-2xl font-semibold text-primary">Plataformas</h3>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">
+              <span className="text-xs tracking-widest text-brand">
                 Tecnologia ÍMPAR
               </span>
             </div>
@@ -656,8 +660,8 @@ function Index() {
           <div className="mt-16">
             <div className="flex items-baseline justify-between">
               <h3 className="font-display text-2xl font-semibold text-primary">Serviços</h3>
-              <span className="text-xs uppercase tracking-widest text-muted-foreground">
-                Consultoria e desenvolvimento
+              <span className="text-xs tracking-widest text-brand">
+                Desenvolvimento
               </span>
             </div>
             <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -666,7 +670,7 @@ function Index() {
                   key={i}
                   className="group rounded-2xl border border-border bg-card p-6 transition hover:border-brand hover:shadow-lg"
                 >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-soft text-brand">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-brand text-brand-foreground">
                     <Icon className="h-5 w-5" />
                   </div>
                   <h4 className="mt-4 font-display text-base font-semibold text-primary">{title}</h4>
@@ -695,7 +699,7 @@ function Index() {
           <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-widest text-brand">Para quem</p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-              Soluções desenhadas para cada público.
+              Soluções customizadas para cada público.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Atendemos organizações, profissionais e líderes com abordagens específicas para
@@ -725,7 +729,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-widest text-brand">
-              Por que escolher ÍMPAR
+              Por que escolher a ÍMPAR
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
               O rigor da técnica, a alma da presença, a escala da tecnologia.
@@ -780,11 +784,10 @@ function Index() {
       <section className="border-t border-border/60 bg-surface">
         <div className="mx-auto max-w-4xl px-6 py-20 text-center">
           <h2 className="font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
-            Vamos desenhar a solução certa para o seu contexto?
+            Qual desafio a sua organização precisa superar neste momento?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-            Conversamos com organizações, profissionais de RH e líderes para entender o momento
-            e propor o caminho mais eficaz.
+            Entendemos o desafio a ser superado e propomos a solução mais eficaz.
           </p>
           <button
             type="button"
@@ -841,6 +844,17 @@ function Index() {
                 >
                   <Linkedin className="h-4 w-4" />
                   LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://facebook.com/impareduca"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 hover:text-brand-soft"
+                >
+                  <Facebook className="h-4 w-4" />
+                  Facebook
                 </a>
               </li>
             </ul>
