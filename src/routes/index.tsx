@@ -14,13 +14,13 @@ import logoInviolavel from "@/assets/generated/logoInviolavel.png";
 import logoUnimed from "@/assets/generated/logoUnimed.png";
 import logoAbrhPa from "@/assets/generated/logoAbrhPa.png";
 import logoAcp from "@/assets/generated/logoAcp.jpg";
+import logoTracbel from "@/assets/generated/logoTracbel.png";
+import logoWurth from "@/assets/generated/logoWurth.jpg";
+import logoAqualand from "@/assets/generated/logoAqualand.png";
+import logoSupergiro from "@/assets/generated/logoSupergiro.png";
+import logoConsag from "@/assets/generated/logoConsag.png";
+import fotoLuiz from "@/assets/generated/fotoLuiz.jpg";
 import suziAsset from "@/assets/suzi.jpg.asset.json";
-import luizAsset from "@/assets/luiz.jpg.asset.json";
-import tracbelAsset from "@/assets/clients/tracbel.png.asset.json";
-import wurthAsset from "@/assets/clients/wurth.jpg.asset.json";
-import aqualandAsset from "@/assets/clients/aqualand.png.asset.json";
-import supergiroAsset from "@/assets/clients/supergiro.png.asset.json";
-import consagAsset from "@/assets/clients/consag.png.asset.json";
 import {
   ArrowRight,
   Users,
@@ -51,8 +51,6 @@ import {
 // Imagens
 
 const fotoSuzi = suziAsset.url;
-
-const fotoLuiz = luizAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -168,12 +166,12 @@ const services = [
 
 const clientLogos = [
   { name: "ALBRAS", src: logoAlbrasNovo },
-  { name: "TRACBEL", src: tracbelAsset.url },
+  { name: "TRACBEL", src: logoTracbel },
   { name: "Hydro", src: logoHydroNovo },
-  { name: "Würth", src: wurthAsset.url },
-  { name: "Aqualand", src: aqualandAsset.url },
-  { name: "Supergiro", src: supergiroAsset.url },
-  { name: "Consag", src: consagAsset.url },
+  { name: "Würth", src: logoWurth },
+  { name: "Aqualand", src: logoAqualand },
+  { name: "Supergiro", src: logoSupergiro },
+  { name: "Consag", src: logoConsag },
   { name: "Banco da Amazônia", src: logoBasa },
   { name: "Companhia Docas do Pará", src: logoCdp },
   { name: "Votorantim Cimentos", src: logoVotorantim },
@@ -729,7 +727,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-widest text-brand">
-              Por que escolher a ÍMPAR
+              Por que escolher a ÍMPAR?
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight text-primary md:text-4xl">
               O rigor da técnica, a alma da presença, a escala da tecnologia.
